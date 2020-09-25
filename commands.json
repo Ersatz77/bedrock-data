@@ -65,6 +65,46 @@
                 }
             }
         },
+        "camerashake": {
+            "type": "literal",
+            "children": {
+                "add": {
+                    "type": "literal",
+                    "children": {
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "amount": "multiple",
+                                "type": "players"
+                            },
+                            "children": {
+                                "intensity": {
+                                    "type": "argument",
+                                    "parser": "brigadier:float",
+                                    "properties": {
+                                        "min": 0,
+                                        "max": 4
+                                    },
+                                    "children": {
+                                        "seconds": {
+                                            "type": "argument",
+                                            "parser": "brigadier:float",
+                                            "properties": {
+                                                "min": 0
+                                            },
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                }
+            }
+        },
         "clear": {
             "type": "literal",
             "children": {
@@ -106,6 +146,20 @@
                 }
             },
             "executable": true
+        },
+        "clearspawnpoint": {
+            "type": "literal",
+            "children": {
+                "targets": {
+                    "type": "argument",
+                    "parser": "minecraft:entity",
+                    "properties": {
+                        "amount": "multiple",
+                        "type": "entities"
+                    },
+                    "executable": true
+                }
+            }
         },
         "clone": {
             "type": "literal",
@@ -436,6 +490,34 @@
                                 }
                             },
                             "executable": true
+                        }
+                    }
+                }
+            }
+        },
+        "event": {
+            "type": "literal",
+            "children": {
+                "entity": {
+                    "type": "literal",
+                    "children": {
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "amount": "multiple",
+                                "type": "entities"
+                            },
+                            "children": {
+                                "event_name": {
+                                    "type": "argument",
+                                    "parser": "brigadier:string",
+                                    "properties": {
+                                        "type": "greedy"
+                                    },
+                                    "executable": true
+                                }
+                            }
                         }
                     }
                 }
