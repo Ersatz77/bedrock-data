@@ -127,7 +127,7 @@
                                         "min": -1
                                     },
                                     "children": {
-                                        "maxCount": {
+                                        "max_count": {
                                             "type": "argument",
                                             "parser": "brigadier:integer",
                                             "properties": {
@@ -155,7 +155,7 @@
                     "parser": "minecraft:entity",
                     "properties": {
                         "amount": "multiple",
-                        "type": "entities"
+                        "type": "players"
                     },
                     "executable": true
                 }
@@ -411,7 +411,7 @@
                     "parser": "minecraft:entity",
                     "properties": {
                         "amount": "multiple",
-                        "type": "entities"
+                        "type": "players"
                     },
                     "children": {
                         "enchantment": {
