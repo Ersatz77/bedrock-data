@@ -507,7 +507,7 @@
                                 "type": "entities"
                             },
                             "children": {
-                                "event_name": {
+                                "eventName": {
                                     "type": "argument",
                                     "parser": "brigadier:string",
                                     "properties": {
@@ -606,14 +606,14 @@
                         "push": {
                             "type": "literal",
                             "children": {
-                                "fog_id": {
+                                "fogId": {
                                     "type": "argument",
                                     "parser": "brigadier:string",
                                     "properties": {
                                         "type": "phrase"
                                     },
                                     "children": {
-                                        "user_provided_id": {
+                                        "userProvidedId": {
                                             "type": "argument",
                                             "parser": "brigadier:string",
                                             "properties": {
@@ -628,14 +628,14 @@
                         "pop": {
                             "type": "literal",
                             "children": {
-                                "fog_id": {
+                                "fogId": {
                                     "type": "argument",
                                     "parser": "brigadier:string",
                                     "properties": {
                                         "type": "phrase"
                                     },
                                     "children": {
-                                        "user_provided_id": {
+                                        "userProvidedId": {
                                             "type": "argument",
                                             "parser": "brigadier:string",
                                             "properties": {
@@ -650,7 +650,7 @@
                         "remove": {
                             "type": "literal",
                             "children": {
-                                "user_provided_id": {
+                                "userProvidedId": {
                                     "type": "argument",
                                     "parser": "brigadier:string",
                                     "properties": {
