@@ -15,7 +15,8 @@
                     "parser": "brigadier:bool",
                     "executable": true
                 }
-            }
+            },
+            "executable": true
         },
         "ability": {
             "type": "literal",
@@ -824,7 +825,7 @@
         "gamerule": {
             "type": "literal",
             "children": {
-                "commandBlocksEnabled": {
+                "commandblocksenabled": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -835,7 +836,7 @@
                     },
                     "executable": true
                 },
-                "commandBlockOutput": {
+                "commandblockoutput": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -846,7 +847,7 @@
                     },
                     "executable": true
                 },
-                "doDaylightCycle": {
+                "dodaylightcycle": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -857,7 +858,7 @@
                     },
                     "executable": true
                 },
-                "doEntityDrops": {
+                "doentitydrops": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -868,7 +869,7 @@
                     },
                     "executable": true
                 },
-                "doFireTick": {
+                "dofiretick": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -879,7 +880,7 @@
                     },
                     "executable": true
                 },
-                "doImmediateRespawn": {
+                "doimmediaterespawn": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -890,7 +891,7 @@
                     },
                     "executable": true
                 },
-                "doInsomnia": {
+                "doinsomnia": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -901,7 +902,7 @@
                     },
                     "executable": true
                 },
-                "doMobLoot": {
+                "domobloot": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -912,7 +913,7 @@
                     },
                     "executable": true
                 },
-                "doMobSpawning": {
+                "domobspawning": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -923,7 +924,7 @@
                     },
                     "executable": true
                 },
-                "doTileDrops": {
+                "dotiledrops": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -934,7 +935,7 @@
                     },
                     "executable": true
                 },
-                "doWeatherCycle": {
+                "doweathercycle": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -945,7 +946,7 @@
                     },
                     "executable": true
                 },
-                "drowningDamage": {
+                "drowningdamage": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -956,7 +957,7 @@
                     },
                     "executable": true
                 },
-                "fallDamage": {
+                "falldamage": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -967,7 +968,7 @@
                     },
                     "executable": true
                 },
-                "fireDamage": {
+                "firedamage": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -978,7 +979,7 @@
                     },
                     "executable": true
                 },
-                "keepInventory": {
+                "keepinventory": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -989,7 +990,7 @@
                     },
                     "executable": true
                 },
-                "maxCommandChainLength": {
+                "maxcommandchainlength": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1000,7 +1001,7 @@
                     },
                     "executable": true
                 },
-                "mobGriefing": {
+                "mobgriefing": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1011,7 +1012,7 @@
                     },
                     "executable": true
                 },
-                "naturalRegeneration": {
+                "naturalregeneration": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1033,7 +1034,7 @@
                     },
                     "executable": true
                 },
-                "randomTickSpeed": {
+                "randomtickspeed": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1044,7 +1045,7 @@
                     },
                     "executable": true
                 },
-                "sendCommandFeedback": {
+                "sendcommandfeedback": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1055,7 +1056,7 @@
                     },
                     "executable": true
                 },
-                "showCoordinates": {
+                "showcoordinates": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1066,7 +1067,7 @@
                     },
                     "executable": true
                 },
-                "showDeathMessages": {
+                "showdeathmessages": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1077,7 +1078,7 @@
                     },
                     "executable": true
                 },
-                "showTags": {
+                "showtags": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1088,7 +1089,7 @@
                     },
                     "executable": true
                 },
-                "spawnRadius": {
+                "spawnradius": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -1099,7 +1100,7 @@
                     },
                     "executable": true
                 },
-                "tntExplodes": {
+                "tntexplodes": {
                     "type": "literal",
                     "children": {
                         "value": {
