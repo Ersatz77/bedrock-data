@@ -1372,6 +1372,121 @@
                 }
             }
         },
+        "music": {
+            "type": "literal",
+            "children": {
+                "queue": {
+                    "type": "literal",
+                    "children": {
+                        "sound": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_location",
+                            "children": {
+                                "volume": {
+                                    "type": "argument",
+                                    "parser": "brigadier:float",
+                                    "properties": {
+                                        "min": 0.0,
+                                        "max": 1.0
+                                    },
+                                    "children": {
+                                        "fadeSeconds": {
+                                            "type": "argument",
+                                            "parser": "brigadier:float",
+                                            "properties": {
+                                                "min": 0.0
+                                            },
+                                            "children": {
+                                                "loop": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "play_once": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                },
+                "play": {
+                    "type": "literal",
+                    "children": {
+                        "sound": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_location",
+                            "children": {
+                                "volume": {
+                                    "type": "argument",
+                                    "parser": "brigadier:float",
+                                    "properties": {
+                                        "min": 0.0,
+                                        "max": 1.0
+                                    },
+                                    "children": {
+                                        "fadeSeconds": {
+                                            "type": "argument",
+                                            "parser": "brigadier:float",
+                                            "properties": {
+                                                "min": 0.0
+                                            },
+                                            "children": {
+                                                "loop": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "play_once": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                },
+                "stop": {
+                    "type": "literal",
+                    "children": {
+                        "fadeSeconds": {
+                            "type": "argument",
+                            "parser": "brigadier:float",
+                            "properties": {
+                                "min": 0.0
+                            },
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                },
+                "volume": {
+                    "type": "literal",
+                    "children": {
+                        "volume": {
+                            "type": "argument",
+                            "parser": "brigadier:float",
+                            "properties": {
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "executable": true
+                        }
+                    }
+                }
+            }
+        },
         "op": {
             "type": "literal",
             "children": {
