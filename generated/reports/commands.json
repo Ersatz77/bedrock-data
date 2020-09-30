@@ -464,7 +464,7 @@
                                 "detect": {
                                     "type": "literal",
                                     "children": {
-                                        "dectectPos": {
+                                        "detectPos": {
                                             "type": "argument",
                                             "parser": "minecraft:block_pos",
                                             "children": {
