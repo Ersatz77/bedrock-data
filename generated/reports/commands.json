@@ -677,7 +677,7 @@
         "gamemode": {
             "type": "literal",
             "children": {
-                "gameModeInt": {
+                "value": {
                     "type": "argument",
                     "parser": "brigadier:integer",
                     "properties": {
