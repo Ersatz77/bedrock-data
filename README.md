@@ -1,1 +1,1 @@
-Just keeps track of Minecraft Bedrock's command format since they don't provide us a with generator like Java.
+Just keeps track of Minecraft Bedrock's command format since they don't provide us with a generator like Java.
