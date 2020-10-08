@@ -90,6 +90,16 @@
                                             "properties": {
                                                 "min": 0
                                             },
+                                            "children": {
+                                                "positional": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "rotational": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
                                             "executable": true
                                         }
                                     },
@@ -2114,6 +2124,82 @@
                     "type": "argument",
                     "parser": "minecraft:message",
                     "executable": true
+                }
+            }
+        },
+        "schedule": {
+            "type": "literal",
+            "children": {
+                "on_area_loaded": {
+                    "type": "literal",
+                    "children": {
+                        "add": {
+                            "type": "literal",
+                            "children": {
+                                "from": {
+                                    "type": "argument",
+                                    "parser": "minecraft:vec3",
+                                    "children": {
+                                        "to": {
+                                            "type": "argument",
+                                            "parser": "minecraft:vec3",
+                                            "children": {
+                                                "function": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:function",
+                                                    "executable": true
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "circle": {
+                                    "type": "literal",
+                                    "children": {
+                                        "center": {
+                                            "type": "argument",
+                                            "parser": "minecraft:vec3",
+                                            "children": {
+                                                "radius": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:integer",
+                                                    "properties": {
+                                                        "min": 0
+                                                    },
+                                                    "children": {
+                                                        "function": {
+                                                            "type": "argument",
+                                                            "parser": "minecraft:function",
+                                                            "executable": true
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "tickingarea": {
+                                    "type": "literal",
+                                    "children": {
+                                        "name": {
+                                            "type": "argument",
+                                            "parser": "brigadier:string",
+                                            "properties": {
+                                                "type": "word"
+                                            },
+                                            "children": {
+                                                "function": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:function",
+                                                    "executable": true
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
