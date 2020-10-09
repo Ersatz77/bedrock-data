@@ -638,22 +638,13 @@
                         "pop": {
                             "type": "literal",
                             "children": {
-                                "fogId": {
+                                "userProvidedId": {
                                     "type": "argument",
                                     "parser": "brigadier:string",
                                     "properties": {
-                                        "type": "phrase"
+                                        "type": "greedy"
                                     },
-                                    "children": {
-                                        "userProvidedId": {
-                                            "type": "argument",
-                                            "parser": "brigadier:string",
-                                            "properties": {
-                                                "type": "greedy"
-                                            },
-                                            "executable": true
-                                        }
-                                    }
+                                    "executable": true
                                 }
                             }
                         },
