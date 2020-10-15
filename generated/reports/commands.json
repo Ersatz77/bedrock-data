@@ -2669,14 +2669,11 @@
                                     "children": {
                                         "rotation": {
                                             "type": "argument",
-                                            "parser": "brigadier:string",
-                                            "properties": {
-                                                "type": "word"
-                                            },
+                                            "parser": "minecraft:structure_rotation",
                                             "children": {
                                                 "mirror": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:swizzle",
+                                                    "parser": "minecraft:structure_mirror",
                                                     "children": {
                                                         "includesEntities": {
                                                             "type": "argument",
