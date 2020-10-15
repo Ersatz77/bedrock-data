@@ -2670,8 +2670,9 @@
                                         "0_degrees": {
                                             "type": "literal",
                                             "children": {
-                                                "none": {
-                                                    "type": "literal",
+                                                "mirror": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:swizzle",
                                                     "children": {
                                                         "includesEntities": {
                                                             "type": "argument",
@@ -2705,34 +2706,44 @@
                                                                 }
                                                             },
                                                             "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "x": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
+                                                        },
+                                                        "block_by_block": {
+                                                            "type": "literal",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "animationSeconds": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:bool",
+                                                                    "parser": "brigadier:float",
+                                                                    "properties": {
+                                                                        "min": 0.0
+                                                                    },
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "includesEntities": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "includesBlocks": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
+                                                                                    "parser": "brigadier:bool",
+                                                                                    "children": {
+                                                                                        "integrity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "properties": {
+                                                                                                "min": 0.0,
+                                                                                                "max": 1.0
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "seed": {
+                                                                                                    "type": "argument",
+                                                                                                    "parser": "brigadier:string",
+                                                                                                    "properties": {
+                                                                                                        "type": "word"
+                                                                                                    },
+                                                                                                    "executable": true
+                                                                                                }
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
@@ -2744,73 +2755,44 @@
                                                                 }
                                                             },
                                                             "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "z": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
+                                                        },
+                                                        "layer_by_layer": {
+                                                            "type": "literal",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "animationSeconds": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:bool",
-                                                                    "children": {
-                                                                        "integrity": {
-                                                                            "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
-                                                                            "children": {
-                                                                                "seed": {
-                                                                                    "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
-                                                                                    },
-                                                                                    "executable": true
-                                                                                }
-                                                                            },
-                                                                            "executable": true
-                                                                        }
+                                                                    "parser": "brigadier:float",
+                                                                    "properties": {
+                                                                        "min": 0.0
                                                                     },
-                                                                    "executable": true
-                                                                }
-                                                            },
-                                                            "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "xz": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
-                                                            "children": {
-                                                                "includesBlocks": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:bool",
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "includesEntities": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "includesBlocks": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
+                                                                                    "parser": "brigadier:bool",
+                                                                                    "children": {
+                                                                                        "integrity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "properties": {
+                                                                                                "min": 0.0,
+                                                                                                "max": 1.0
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "seed": {
+                                                                                                    "type": "argument",
+                                                                                                    "parser": "brigadier:string",
+                                                                                                    "properties": {
+                                                                                                        "type": "word"
+                                                                                                    },
+                                                                                                    "executable": true
+                                                                                                }
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
@@ -2832,8 +2814,9 @@
                                         "90_degrees": {
                                             "type": "literal",
                                             "children": {
-                                                "none": {
-                                                    "type": "literal",
+                                                "mirror": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:swizzle",
                                                     "children": {
                                                         "includesEntities": {
                                                             "type": "argument",
@@ -2867,34 +2850,44 @@
                                                                 }
                                                             },
                                                             "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "x": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
+                                                        },
+                                                        "block_by_block": {
+                                                            "type": "literal",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "animationSeconds": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:bool",
+                                                                    "parser": "brigadier:float",
+                                                                    "properties": {
+                                                                        "min": 0.0
+                                                                    },
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "includesEntities": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "includesBlocks": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
+                                                                                    "parser": "brigadier:bool",
+                                                                                    "children": {
+                                                                                        "integrity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "properties": {
+                                                                                                "min": 0.0,
+                                                                                                "max": 1.0
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "seed": {
+                                                                                                    "type": "argument",
+                                                                                                    "parser": "brigadier:string",
+                                                                                                    "properties": {
+                                                                                                        "type": "word"
+                                                                                                    },
+                                                                                                    "executable": true
+                                                                                                }
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
@@ -2906,73 +2899,44 @@
                                                                 }
                                                             },
                                                             "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "z": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
+                                                        },
+                                                        "layer_by_layer": {
+                                                            "type": "literal",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "animationSeconds": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:bool",
-                                                                    "children": {
-                                                                        "integrity": {
-                                                                            "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
-                                                                            "children": {
-                                                                                "seed": {
-                                                                                    "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
-                                                                                    },
-                                                                                    "executable": true
-                                                                                }
-                                                                            },
-                                                                            "executable": true
-                                                                        }
+                                                                    "parser": "brigadier:float",
+                                                                    "properties": {
+                                                                        "min": 0.0
                                                                     },
-                                                                    "executable": true
-                                                                }
-                                                            },
-                                                            "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "xz": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
-                                                            "children": {
-                                                                "includesBlocks": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:bool",
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "includesEntities": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "includesBlocks": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
+                                                                                    "parser": "brigadier:bool",
+                                                                                    "children": {
+                                                                                        "integrity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "properties": {
+                                                                                                "min": 0.0,
+                                                                                                "max": 1.0
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "seed": {
+                                                                                                    "type": "argument",
+                                                                                                    "parser": "brigadier:string",
+                                                                                                    "properties": {
+                                                                                                        "type": "word"
+                                                                                                    },
+                                                                                                    "executable": true
+                                                                                                }
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
@@ -2994,8 +2958,9 @@
                                         "180_degrees": {
                                             "type": "literal",
                                             "children": {
-                                                "none": {
-                                                    "type": "literal",
+                                                "mirror": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:swizzle",
                                                     "children": {
                                                         "includesEntities": {
                                                             "type": "argument",
@@ -3029,34 +2994,44 @@
                                                                 }
                                                             },
                                                             "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "x": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
+                                                        },
+                                                        "block_by_block": {
+                                                            "type": "literal",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "animationSeconds": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:bool",
+                                                                    "parser": "brigadier:float",
+                                                                    "properties": {
+                                                                        "min": 0.0
+                                                                    },
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "includesEntities": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "includesBlocks": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
+                                                                                    "parser": "brigadier:bool",
+                                                                                    "children": {
+                                                                                        "integrity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "properties": {
+                                                                                                "min": 0.0,
+                                                                                                "max": 1.0
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "seed": {
+                                                                                                    "type": "argument",
+                                                                                                    "parser": "brigadier:string",
+                                                                                                    "properties": {
+                                                                                                        "type": "word"
+                                                                                                    },
+                                                                                                    "executable": true
+                                                                                                }
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
@@ -3068,73 +3043,44 @@
                                                                 }
                                                             },
                                                             "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "z": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
+                                                        },
+                                                        "layer_by_layer": {
+                                                            "type": "literal",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "animationSeconds": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:bool",
-                                                                    "children": {
-                                                                        "integrity": {
-                                                                            "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
-                                                                            "children": {
-                                                                                "seed": {
-                                                                                    "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
-                                                                                    },
-                                                                                    "executable": true
-                                                                                }
-                                                                            },
-                                                                            "executable": true
-                                                                        }
+                                                                    "parser": "brigadier:float",
+                                                                    "properties": {
+                                                                        "min": 0.0
                                                                     },
-                                                                    "executable": true
-                                                                }
-                                                            },
-                                                            "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "xz": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
-                                                            "children": {
-                                                                "includesBlocks": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:bool",
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "includesEntities": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "includesBlocks": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
+                                                                                    "parser": "brigadier:bool",
+                                                                                    "children": {
+                                                                                        "integrity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "properties": {
+                                                                                                "min": 0.0,
+                                                                                                "max": 1.0
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "seed": {
+                                                                                                    "type": "argument",
+                                                                                                    "parser": "brigadier:string",
+                                                                                                    "properties": {
+                                                                                                        "type": "word"
+                                                                                                    },
+                                                                                                    "executable": true
+                                                                                                }
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
@@ -3156,8 +3102,9 @@
                                         "270_degrees": {
                                             "type": "literal",
                                             "children": {
-                                                "none": {
-                                                    "type": "literal",
+                                                "mirror": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:swizzle",
                                                     "children": {
                                                         "includesEntities": {
                                                             "type": "argument",
@@ -3191,34 +3138,44 @@
                                                                 }
                                                             },
                                                             "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "x": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
+                                                        },
+                                                        "block_by_block": {
+                                                            "type": "literal",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "animationSeconds": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:bool",
+                                                                    "parser": "brigadier:float",
+                                                                    "properties": {
+                                                                        "min": 0.0
+                                                                    },
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "includesEntities": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "includesBlocks": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
+                                                                                    "parser": "brigadier:bool",
+                                                                                    "children": {
+                                                                                        "integrity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "properties": {
+                                                                                                "min": 0.0,
+                                                                                                "max": 1.0
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "seed": {
+                                                                                                    "type": "argument",
+                                                                                                    "parser": "brigadier:string",
+                                                                                                    "properties": {
+                                                                                                        "type": "word"
+                                                                                                    },
+                                                                                                    "executable": true
+                                                                                                }
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
@@ -3230,73 +3187,44 @@
                                                                 }
                                                             },
                                                             "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "z": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
+                                                        },
+                                                        "layer_by_layer": {
+                                                            "type": "literal",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "animationSeconds": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:bool",
-                                                                    "children": {
-                                                                        "integrity": {
-                                                                            "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
-                                                                            "children": {
-                                                                                "seed": {
-                                                                                    "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
-                                                                                    },
-                                                                                    "executable": true
-                                                                                }
-                                                                            },
-                                                                            "executable": true
-                                                                        }
+                                                                    "parser": "brigadier:float",
+                                                                    "properties": {
+                                                                        "min": 0.0
                                                                     },
-                                                                    "executable": true
-                                                                }
-                                                            },
-                                                            "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                },
-                                                "xz": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "includesEntities": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:bool",
-                                                            "children": {
-                                                                "includesBlocks": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:bool",
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "includesEntities": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "includesBlocks": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
-                                                                                    "properties": {
-                                                                                        "type": "word"
+                                                                                    "parser": "brigadier:bool",
+                                                                                    "children": {
+                                                                                        "integrity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "properties": {
+                                                                                                "min": 0.0,
+                                                                                                "max": 1.0
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "seed": {
+                                                                                                    "type": "argument",
+                                                                                                    "parser": "brigadier:string",
+                                                                                                    "properties": {
+                                                                                                        "type": "word"
+                                                                                                    },
+                                                                                                    "executable": true
+                                                                                                }
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
