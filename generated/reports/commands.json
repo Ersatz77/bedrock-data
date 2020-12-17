@@ -547,7 +547,7 @@
                             "children": {
                                 "block": {
                                     "type": "argument",
-                                    "parser": "minecraft:block_predicate",
+                                    "parser": "minecraft:block_state",
                                     "children": {
                                         "data": {
                                             "type": "argument",
