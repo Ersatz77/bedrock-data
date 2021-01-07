@@ -109,6 +109,21 @@
                             "executable": true
                         }
                     }
+                },
+                "stop": {
+                    "type": "literal",
+                    "children": {
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "amount": "multiple",
+                                "type": "players"
+                            },
+                            "executable": true
+                        }
+                    },
+                    "executable": true
                 }
             }
         },
@@ -2824,6 +2839,19 @@
                                     "executable": true
                                 }
                             }
+                        }
+                    }
+                },
+                "delete": {
+                    "type": "literal",
+                    "children": {
+                        "name": {
+                            "type": "argument",
+                            "parser": "brigadier:string",
+                            "properties": {
+                                "type": "greedy"
+                            },
+                            "executable": true
                         }
                     }
                 }
