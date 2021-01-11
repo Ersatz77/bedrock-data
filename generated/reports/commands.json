@@ -1597,7 +1597,7 @@
                                     "children": {
                                         "blend_out_time": {
                                             "type": "argument",
-                                            "parser": "minecraft:float",
+                                            "parser": "brigadier:float",
                                             "children": {
                                                 "stop_expression": {
                                                     "type": "argument",
