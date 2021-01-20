@@ -206,7 +206,7 @@
                                                     "children": {
                                                         "block": {
                                                             "type": "argument",
-                                                            "parser": "minecraft:block_predicate",
+                                                            "parser": "minecraft:block",
                                                             "children": {
                                                                 "data": {
                                                                     "type": "argument",
@@ -215,9 +215,13 @@
                                                                         "min": -1
                                                                     },
                                                                     "executable": true
+                                                                },
+                                                                "blockStates": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:block_state",
+                                                                    "executable": true
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
                                                     }
                                                 },
@@ -226,7 +230,7 @@
                                                     "children": {
                                                         "block": {
                                                             "type": "argument",
-                                                            "parser": "minecraft:block_predicate",
+                                                            "parser": "minecraft:block",
                                                             "children": {
                                                                 "data": {
                                                                     "type": "argument",
@@ -235,9 +239,13 @@
                                                                         "min": -1
                                                                     },
                                                                     "executable": true
+                                                                },
+                                                                "blockStates": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:block_state",
+                                                                    "executable": true
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
                                                     }
                                                 },
@@ -246,7 +254,7 @@
                                                     "children": {
                                                         "block": {
                                                             "type": "argument",
-                                                            "parser": "minecraft:block_predicate",
+                                                            "parser": "minecraft:block",
                                                             "children": {
                                                                 "data": {
                                                                     "type": "argument",
@@ -255,9 +263,13 @@
                                                                         "min": -1
                                                                     },
                                                                     "executable": true
+                                                                },
+                                                                "blockStates": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:block_state",
+                                                                    "executable": true
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -562,7 +574,7 @@
                             "children": {
                                 "block": {
                                     "type": "argument",
-                                    "parser": "minecraft:block_state",
+                                    "parser": "minecraft:block",
                                     "children": {
                                         "data": {
                                             "type": "argument",
@@ -592,7 +604,7 @@
                                                     "children": {
                                                         "block": {
                                                             "type": "argument",
-                                                            "parser": "minecraft:block_predicate",
+                                                            "parser": "minecraft:block",
                                                             "children": {
                                                                 "data": {
                                                                     "type": "argument",
@@ -611,33 +623,47 @@
                                             },
                                             "executable": true
                                         },
-                                        "destroy": {
-                                            "type": "literal",
-                                            "executable": true
-                                        },
-                                        "hollow": {
-                                            "type": "literal",
-                                            "executable": true
-                                        },
-                                        "keep": {
-                                            "type": "literal",
-                                            "executable": true
-                                        },
-                                        "outline": {
-                                            "type": "literal",
-                                            "executable": true
-                                        },
-                                        "replace": {
-                                            "type": "literal",
+                                        "blockStates": {
+                                            "type": "argument",
+                                            "parser": "minecraft:block_state",
                                             "children": {
-                                                "block": {
-                                                    "type": "argument",
-                                                    "parser": "minecraft:block_predicate",
+                                                "destroy": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "hollow": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "keep": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "outline": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "replace": {
+                                                    "type": "literal",
+                                                    "children": {
+                                                        "block": {
+                                                            "type": "argument",
+                                                            "parser": "minecraft:block",
+                                                            "children": {
+                                                                "blockStates": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:block_state",
+                                                                    "executable": true
+                                                                }
+                                                            },
+                                                            "executable": true
+                                                        }
+                                                    },
                                                     "executable": true
                                                 }
                                             },
                                             "executable": true
-                                        }
+                                        }           
                                     },
                                     "executable": true
                                 }
@@ -1012,6 +1038,17 @@
                     "executable": true
                 },
                 "firedamage": {
+                    "type": "literal",
+                    "children": {
+                        "value": {
+                            "type": "argument",
+                            "parser": "brigadier:bool",
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                },
+                "freezedamage": {
                     "type": "literal",
                     "children": {
                         "value": {
@@ -2520,7 +2557,7 @@
                     "children": {
                         "block": {
                             "type": "argument",
-                            "parser": "minecraft:block_state",
+                            "parser": "minecraft:block",
                             "children": {
                                 "data": {
                                     "type": "argument",
@@ -2544,16 +2581,23 @@
                                     },
                                     "executable": true
                                 },
-                                "destroy": {
-                                    "type": "literal",
-                                    "executable": true
-                                },
-                                "keep": {
-                                    "type": "literal",
-                                    "executable": true
-                                },
-                                "replace": {
-                                    "type": "literal",
+                                "blockStates": {
+                                    "type": "argument",
+                                    "parser": "minecraft:block_state",
+                                    "children": {
+                                        "destroy": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "keep": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "replace": {
+                                            "type": "literal",
+                                            "executable": true
+                                        }
+                                    },
                                     "executable": true
                                 }
                             },
