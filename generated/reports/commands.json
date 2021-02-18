@@ -2449,6 +2449,16 @@
                                         "objective": {
                                             "type": "argument",
                                             "parser": "minecraft:objective",
+                                            "children": {
+                                                "ascending": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "descending": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
                                             "executable": true
                                         }
                                     },
