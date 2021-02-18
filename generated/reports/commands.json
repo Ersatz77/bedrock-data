@@ -1204,6 +1204,109 @@
                 }
             }
         },
+        "gametest": {
+            "type": "literal",
+            "children": {
+                "runthis": {
+                    "type": "literal",
+                    "executable": true
+                },
+                "run": {
+                    "type": "literal",
+                    "children": {
+                        "testName": {
+                            "type": "argument",
+                            "parser": "brigadier:string",
+                            "properties": {
+                                "type": "word"
+                            },
+                            "children": {
+                                "rotationSteps": {
+                                    "type": "argument",
+                                    "parser": "brigadier:integer",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                },
+                "runall": {
+                    "type": "literal",
+                    "children": {
+                        "testTag": {
+                            "type": "argument",
+                            "parser": "brigadier:string",
+                            "properties": {
+                                "type": "word"
+                            },
+                            "children": {
+                                "rotationSteps": {
+                                    "type": "argument",
+                                    "parser": "brigadier:integer",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                },
+                "clearall": {
+                    "type": "literal",
+                    "children": {
+                        "radius": {
+                            "type": "argument",
+                            "parser": "brigadier:integer",
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                },
+                "pos": {
+                    "type": "literal",
+                    "executable": true
+                },
+                "create": {
+                    "type": "literal",
+                    "children": {
+                        "testName": {
+                            "type": "argument",
+                            "parser": "brigadier:string",
+                            "properties": {
+                                "type": "word"
+                            },
+                            "children": {
+                                "width": {
+                                    "type": "argument",
+                                    "parser": "brigadier:integer",
+                                    "children": {
+                                        "height": {
+                                            "type": "argument",
+                                            "parser": "brigadier:integer",
+                                            "children": {
+                                                "depth": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:integer",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                },
+                "runthese": {
+                    "type": "literal",
+                    "executable": true
+                }
+            }
+        },
         "give": {
             "type": "literal",
             "children": {
