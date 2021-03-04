@@ -1225,6 +1225,27 @@
                                     "type": "argument",
                                     "parser": "brigadier:integer",
                                     "executable": true
+                                },
+                                "stopOnFailure": {
+                                    "type": "argument",
+                                    "parser": "brigadier:bool",
+                                    "children": {
+                                        "repeatCount": {
+                                            "type": "argument",
+                                            "parser": "brigadier:integer",
+                                            "properties": {
+                                                "min": 0
+                                            },
+                                            "children": {
+                                                "rotationSteps": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:integer",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
                                 }
                             },
                             "executable": true
