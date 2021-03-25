@@ -1252,7 +1252,7 @@
                         }
                     }
                 },
-                "runall": {
+                "runset": {
                     "type": "literal",
                     "children": {
                         "testTag": {
