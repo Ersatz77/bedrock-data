@@ -2687,6 +2687,38 @@
                                     }
                                 }
                             }
+                        },
+                        "test": {
+                            "type": "literal",
+                            "children": {
+                                "targets": {
+                                    "type": "argument",
+                                    "parser": "minecraft:score_holder",
+                                    "properties": {
+                                        "amount": "multiple"
+                                    },
+                                    "children": {
+                                        "objective": {
+                                            "type": "argument",
+                                            "parser": "minecraft:objective",
+                                            "children": {
+                                                "min": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:integer",
+                                                    "children": {
+                                                        "max": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:integer",
+                                                            "executable": true
+                                                        }
+                                                    },
+                                                    "executable": true
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
