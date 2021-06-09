@@ -358,6 +358,80 @@
                 }
             }
         },
+        "dialogue": {
+            "type": "literal",
+            "children": {
+                "change": {
+                    "type": "literal",
+                    "children": {
+                        "npc": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "amount": "single",
+                                "type": "entities"
+                            },
+                            "children": {
+                                "sceneName": {
+                                    "type": "argument",
+                                    "parser": "brigadier:string",
+                                    "properties": {
+                                        "type": "phrase"
+                                    },
+                                    "children": {
+                                        "targets": {
+                                            "type": "argument",
+                                            "parser": "minecraft:entity",
+                                            "properties": {
+                                                "amount": "multiple",
+                                                "type": "players"
+                                            },
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            }
+                        }
+
+                    }
+                },
+                "open": {
+                    "type": "literal",
+                    "children": {
+                        "npc": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "amount": "single",
+                                "type": "entities"
+                            },
+                            "children": {
+                                "targets": {
+                                    "type": "argument",
+                                    "parser": "minecraft:entity",
+                                    "properties": {
+                                        "amount": "multiple",
+                                        "type": "players"
+                                    },
+                                    "children": {
+                                        "sceneName": {
+                                            "type": "argument",
+                                            "parser": "brigadier:string",
+                                            "properties": {
+                                                "type": "greedy"
+                                            },
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "difficulty": {
             "type": "literal",
             "children": {
