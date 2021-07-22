@@ -1801,7 +1801,8 @@
                             "parser": "minecraft:vec3",
                             "executable": true
                         }
-                    }
+                    },
+                    "executable": true
                 }
             }
         },
