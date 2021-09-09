@@ -2942,6 +2942,49 @@
                 }
             }
         },
+        "script": {
+            "type": "literal",
+            "children": {
+                "debugger": {
+                    "type": "literal",
+                    "children": {
+                        "close": {
+                            "type": "literal",
+                            "executable": true
+                        },
+                        "connect": {
+                            "type": "literal",
+                            "children": {
+                                "host": {
+                                    "type": "argument",
+                                    "parser": "brigadier:string",
+                                    "properties": {
+                                        "type": "phrase"
+                                    },
+                                    "children": {
+                                        "port": {
+                                            "type": "argument",
+                                            "parser": "brigadier:integer",
+                                            "executable": true
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "listen": {
+                            "type": "literal",
+                            "children": {
+                                "port": {
+                                    "type": "argument",
+                                    "parser": "brigadier:integer",
+                                    "executable": true
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "stopsound": {
             "type": "literal",
             "children": {
