@@ -1591,6 +1591,49 @@
                 }
             }
         },
+        "loot": {
+            "type": "literal",
+            "children": {
+                "spawn": {
+                    "type": "literal",
+                    "children": {
+                        "targetPos": {
+                            "type": "argument",
+                            "parser": "minecraft:vec3",
+                            "children": {
+                                "loot": {
+                                    "type": "literal",
+                                    "children": {
+                                        "loot_table": {
+                                            "type": "argument",
+                                            "parser": "minecraft:resource_location",
+                                            "children": {
+                                                "tool": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:item_stack",
+                                                    "executable": true
+
+                                                },
+                                                "mainhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+
+                                                },
+                                                "offhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "me": {
             "type": "literal",
             "children": {
