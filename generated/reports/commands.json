@@ -1597,7 +1597,7 @@
                 "spawn": {
                     "type": "literal",
                     "children": {
-                        "targetPos": {
+                        "pos": {
                             "type": "argument",
                             "parser": "minecraft:vec3",
                             "children": {
@@ -1612,12 +1612,10 @@
                                                     "type": "argument",
                                                     "parser": "minecraft:item_stack",
                                                     "executable": true
-
                                                 },
                                                 "mainhand": {
                                                     "type": "literal",
                                                     "executable": true
-
                                                 },
                                                 "offhand": {
                                                     "type": "literal",
