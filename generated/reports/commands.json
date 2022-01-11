@@ -56,6 +56,47 @@
                 }
             }
         },
+        "allowlist": {
+            "type": "literal",
+            "children": {
+                "add": {
+                    "type": "literal",
+                    "children": {
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:game_profile",
+                            "executable": true
+                        }
+                    }
+                },
+                "list": {
+                    "type": "literal",
+                    "executable": true
+                },
+                "off": {
+                    "type": "literal",
+                    "executable": true
+                },
+                "on": {
+                    "type": "literal",
+                    "executable": true
+                },
+                "reload": {
+                    "type": "literal",
+                    "executable": true
+                },
+                "remove": {
+                    "type": "literal",
+                    "children": {
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:game_profile",
+                            "executable": true
+                        }
+                    }
+                }
+            }
+        },
         "alwaysday": {
             "type": "literal",
             "redirect": [
@@ -4072,47 +4113,6 @@
                 "query": {
                     "type": "literal",
                     "executable": true
-                }
-            }
-        },
-        "whitelist": {
-            "type": "literal",
-            "children": {
-                "add": {
-                    "type": "literal",
-                    "children": {
-                        "targets": {
-                            "type": "argument",
-                            "parser": "minecraft:game_profile",
-                            "executable": true
-                        }
-                    }
-                },
-                "list": {
-                    "type": "literal",
-                    "executable": true
-                },
-                "off": {
-                    "type": "literal",
-                    "executable": true
-                },
-                "on": {
-                    "type": "literal",
-                    "executable": true
-                },
-                "reload": {
-                    "type": "literal",
-                    "executable": true
-                },
-                "remove": {
-                    "type": "literal",
-                    "children": {
-                        "targets": {
-                            "type": "argument",
-                            "parser": "minecraft:game_profile",
-                            "executable": true
-                        }
-                    }
                 }
             }
         },
