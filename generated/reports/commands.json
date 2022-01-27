@@ -1743,6 +1743,70 @@
                             }
                         }
                     }
+                },
+                "give": {
+                    "type": "literal",
+                    "children": {
+                        "pos": {
+                            "type": "argument",
+                            "parser": "minecraft:vec3",
+                            "children": {
+                                "loot": {
+                                    "type": "literal",
+                                    "children": {
+                                        "loot_table": {
+                                            "type": "argument",
+                                            "parser": "minecraft:resource_location",
+                                            "children": {
+                                                "tool": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:item_stack",
+                                                    "executable": true
+                                                },
+                                                "mainhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "offhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                },
+                                "kill": {
+                                    "type": "literal",
+                                    "children": {
+                                        "target": {
+                                            "type": "argument",
+                                            "parser": "minecraft:entity",
+                                            "properties": {
+                                                "amount": "single"
+                                            },
+                                            "children": {
+                                                "tool": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:item_stack",
+                                                    "executable": true
+                                                },
+                                                "mainhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "offhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -3759,6 +3823,38 @@
                         }
                     }
                 },
+                "preload": {
+                    "type": "literal",
+                    "children": {
+                        "name": {
+                            "type": "argument",
+                            "parser": "brigadier:string",
+                            "properties": {
+                                "type": "word"
+                            },
+                            "children": {
+                                "preload": {
+                                    "type": "argument",
+                                    "parser": "brigadier:bool",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        },
+                        "pos": {
+                            "type": "argument",
+                            "parser": "minecraft:block_pos",
+                            "children": {
+                                "preload": {
+                                    "type": "argument",
+                                    "parser": "brigadier:bool",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                },
                 "remove": {
                     "type": "literal",
                     "children": {
@@ -3777,10 +3873,6 @@
                         }
                     }
                 },
-                "remove_all": {
-                    "type": "literal",
-                    "executable": true
-                },
                 "list": {
                     "type": "literal",
                     "children": {
@@ -3789,6 +3881,10 @@
                             "executable": true
                         }
                     },
+                    "executable": true
+                },
+                "remove_all": {
+                    "type": "literal",
                     "executable": true
                 }
             }
@@ -4053,6 +4149,78 @@
                             "executable": true
                         }
                     }
+                }
+            }
+        },
+        "volumearea": {
+            "type": "literal",
+            "children": {
+                "add": {
+                    "type": "literal",
+                    "children": {
+                        "identifier": {
+                            "type": "argument",
+                            "parser": "brigadier:string",
+                            "properties": {
+                                "type": "word"
+                            },
+                            "children": {
+                                "from": {
+                                    "type": "argument",
+                                    "parser": "minecraft:block_pos",
+                                    "children": {
+                                        "to": {
+                                            "type": "argument",
+                                            "parser": "minecraft:block_pos",
+                                            "children": {
+                                                "name": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:string",
+                                                    "properties": {
+                                                        "type": "greedy"
+                                                    },
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "remove": {
+                    "type": "literal",
+                    "children": {
+                        "name": {
+                            "type": "argument",
+                            "parser": "brigadier:string",
+                            "properties": {
+                                "type": "greedy"
+                            },
+                            "executable": true
+                        },
+                        "pos": {
+                            "type": "argument",
+                            "parser": "minecraft:block_pos",
+                            "executable": true
+                        }
+                    }
+                },
+                "list": {
+                    "type": "literal",
+                    "children": {
+                        "all-dimensions": {
+                            "type": "literal",
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                },
+                "remove_all": {
+                    "type": "literal",
+                    "executable": true
                 }
             }
         },
