@@ -2096,6 +2096,35 @@
                 }
             }
         },
+        "placefeature": {
+            "type": "literal",
+            "children": {
+                "featureName": {
+                    "type": "argument",
+                    "parser": "minecraft:resource_location",
+                    "children": {
+                        "pos": {
+                            "type": "argument",
+                            "parser": "minecraft:block_pos",
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                },
+                "featureRule": {
+                    "type": "argument",
+                    "parser": "minecraft:resource_location",
+                    "children": {
+                        "pos": {
+                            "type": "argument",
+                            "parser": "minecraft:block_pos",
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                }
+            }
+        },
         "playsound": {
             "type": "literal",
             "children": {
