@@ -1446,13 +1446,6 @@
                 },
                 "clearall": {
                     "type": "literal",
-                    "children": {
-                        "radius": {
-                            "type": "argument",
-                            "parser": "brigadier:integer",
-                            "executable": true
-                        }
-                    },
                     "executable": true
                 },
                 "pos": {
@@ -2029,35 +2022,6 @@
                         "pos": {
                             "type": "argument",
                             "parser": "minecraft:vec3",
-                            "executable": true
-                        }
-                    },
-                    "executable": true
-                }
-            }
-        },
-        "placefeature": {
-            "type": "literal",
-            "children": {
-                "featureName": {
-                    "type": "argument",
-                    "parser": "minecraft:resource_location",
-                    "children": {
-                        "pos": {
-                            "type": "argument",
-                            "parser": "minecraft:block_pos",
-                            "executable": true
-                        }
-                    },
-                    "executable": true
-                },
-                "featureRule": {
-                    "type": "argument",
-                    "parser": "minecraft:resource_location",
-                    "children": {
-                        "pos": {
-                            "type": "argument",
-                            "parser": "minecraft:block_pos",
                             "executable": true
                         }
                     },
