@@ -23,36 +23,29 @@
                             "children": {
                                 "value": {
                                     "type": "argument",
-                                    "parser": "brigadier:bool",
-                                    "executable": true
+                                    "parser": "brigadier:bool"
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "mayfly": {
                             "type": "literal",
                             "children": {
                                 "value": {
                                     "type": "argument",
-                                    "parser": "brigadier:bool",
-                                    "executable": true
+                                    "parser": "brigadier:bool"
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "mute": {
                             "type": "literal",
                             "children": {
                                 "value": {
                                     "type": "argument",
-                                    "parser": "brigadier:bool",
-                                    "executable": true
+                                    "parser": "brigadier:bool"
                                 }
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -64,34 +57,28 @@
                     "children": {
                         "targets": {
                             "type": "argument",
-                            "parser": "minecraft:game_profile",
-                            "executable": true
+                            "parser": "minecraft:game_profile"
                         }
                     }
                 },
                 "list": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "off": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "on": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "reload": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "remove": {
                     "type": "literal",
                     "children": {
                         "targets": {
                             "type": "argument",
-                            "parser": "minecraft:game_profile",
-                            "executable": true
+                            "parser": "minecraft:game_profile"
                         }
                     }
                 }
@@ -133,21 +120,16 @@
                                             },
                                             "children": {
                                                 "positional": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "rotational": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 },
@@ -160,11 +142,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -195,20 +175,15 @@
                                             "parser": "brigadier:integer",
                                             "properties": {
                                                 "min": 0
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 }
-            },
-            "executable": true
+            }
         },
         "clearspawnpoint": {
             "type": "literal",
@@ -219,8 +194,7 @@
                     "properties": {
                         "amount": "multiple",
                         "type": "players"
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -254,13 +228,11 @@
                                                                     "parser": "brigadier:integer",
                                                                     "properties": {
                                                                         "min": -1
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 },
                                                                 "blockStates": {
                                                                     "type": "argument",
-                                                                    "parser": "minecraft:block_state",
-                                                                    "executable": true
+                                                                    "parser": "minecraft:block_state"
                                                                 }
                                                             }
                                                         }
@@ -278,13 +250,11 @@
                                                                     "parser": "brigadier:integer",
                                                                     "properties": {
                                                                         "min": -1
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 },
                                                                 "blockStates": {
                                                                     "type": "argument",
-                                                                    "parser": "minecraft:block_state",
-                                                                    "executable": true
+                                                                    "parser": "minecraft:block_state"
                                                                 }
                                                             }
                                                         }
@@ -302,13 +272,11 @@
                                                                     "parser": "brigadier:integer",
                                                                     "properties": {
                                                                         "min": -1
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 },
                                                                 "blockStates": {
                                                                     "type": "argument",
-                                                                    "parser": "minecraft:block_state",
-                                                                    "executable": true
+                                                                    "parser": "minecraft:block_state"
                                                                 }
                                                             }
                                                         }
@@ -320,40 +288,31 @@
                                             "type": "literal",
                                             "children": {
                                                 "force": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "move": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "normal": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         },
                                         "replace": {
                                             "type": "literal",
                                             "children": {
                                                 "force": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "move": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "normal": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -369,12 +328,10 @@
                     "parser": "brigadier:string",
                     "properties": {
                         "type": "greedy"
-                    },
-                    "executable": true
+                    }
                 },
                 "out": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 }
             }
         },
@@ -409,16 +366,13 @@
                                                     "properties": {
                                                         "amount": "single",
                                                         "type": "entities"
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
                                             }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -429,19 +383,16 @@
             "children": {
                 "lock": {
                     "type": "argument",
-                    "parser": "brigadier:bool",
-                    "executable": true
+                    "parser": "brigadier:bool"
                 }
-            },
-            "executable": true
+            }
         },
         "deop": {
             "type": "literal",
             "children": {
                 "targets": {
                     "type": "argument",
-                    "parser": "minecraft:game_profile",
-                    "executable": true
+                    "parser": "minecraft:game_profile"
                 }
             }
         },
@@ -472,11 +423,9 @@
                                             "properties": {
                                                 "amount": "multiple",
                                                 "type": "players"
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -506,11 +455,9 @@
                                             "parser": "brigadier:string",
                                             "properties": {
                                                 "type": "greedy"
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -522,20 +469,16 @@
             "type": "literal",
             "children": {
                 "easy": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "hard": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "normal": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "peaceful": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "value": {
                     "type": "argument",
@@ -543,8 +486,7 @@
                     "properties": {
                         "min": 0,
                         "max": 3
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -581,21 +523,16 @@
                                             "children": {
                                                 "hideParticles": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:bool",
-                                                    "executable": true
+                                                    "parser": "brigadier:bool"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "clear": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         }
                     }
                 }
@@ -621,11 +558,9 @@
                                     "parser": "brigadier:integer",
                                     "properties": {
                                         "min": 1
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "enchantmentId": {
                             "type": "argument",
@@ -636,11 +571,9 @@
                                     "parser": "brigadier:integer",
                                     "properties": {
                                         "min": 1
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -677,8 +610,7 @@
                                                             "parser": "brigadier:integer",
                                                             "properties": {
                                                                 "min": -1
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -686,8 +618,7 @@
                                         }
                                     }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -712,8 +643,7 @@
                                     "parser": "brigadier:string",
                                     "properties": {
                                         "type": "greedy"
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -744,20 +674,16 @@
                                             },
                                             "children": {
                                                 "destroy": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "hollow": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "keep": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "outline": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "replace": {
                                                     "type": "literal",
@@ -771,37 +697,29 @@
                                                                     "parser": "brigadier:integer",
                                                                     "properties": {
                                                                         "min": -1
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         },
                                         "blockStates": {
                                             "type": "argument",
                                             "parser": "minecraft:block_state",
                                             "children": {
                                                 "destroy": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "hollow": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "keep": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "outline": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "replace": {
                                                     "type": "literal",
@@ -812,20 +730,15 @@
                                                             "children": {
                                                                 "blockStates": {
                                                                     "type": "argument",
-                                                                    "parser": "minecraft:block_state",
-                                                                    "executable": true
+                                                                    "parser": "minecraft:block_state"
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -859,8 +772,7 @@
                                             "parser": "brigadier:string",
                                             "properties": {
                                                 "type": "greedy"
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
@@ -874,8 +786,7 @@
                                     "parser": "brigadier:string",
                                     "properties": {
                                         "type": "greedy"
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         },
@@ -887,8 +798,7 @@
                                     "parser": "brigadier:string",
                                     "properties": {
                                         "type": "greedy"
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -901,8 +811,7 @@
             "children": {
                 "name": {
                     "type": "argument",
-                    "parser": "minecraft:function",
-                    "executable": true
+                    "parser": "minecraft:function"
                 }
             }
         },
@@ -923,11 +832,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "a": {
                     "type": "literal",
@@ -938,11 +845,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "adventure": {
                     "type": "literal",
@@ -953,11 +858,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "c": {
                     "type": "literal",
@@ -968,11 +871,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "creative": {
                     "type": "literal",
@@ -983,11 +884,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "d": {
                     "type": "literal",
@@ -998,11 +897,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "default": {
                     "type": "literal",
@@ -1013,11 +910,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "s": {
                     "type": "literal",
@@ -1028,11 +923,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "survival": {
                     "type": "literal",
@@ -1043,11 +936,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -1059,319 +950,261 @@
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "commandblocksenabled": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "dodaylightcycle": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "doentitydrops": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "dofiretick": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "doimmediaterespawn": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "doinsomnia": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "domobloot": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "domobspawning": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "dotiledrops": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "doweathercycle": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "drowningdamage": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "falldamage": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "firedamage": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "freezedamage": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "functioncommandlimit": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:integer",
-                            "executable": true
+                            "parser": "brigadier:integer"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "keepinventory": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "maxcommandchainlength": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:integer",
-                            "executable": true
+                            "parser": "brigadier:integer"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "mobgriefing": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "naturalregeneration": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "pvp": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "randomtickspeed": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:integer",
-                            "executable": true
+                            "parser": "brigadier:integer"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "respawnblocksexplode": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "sendcommandfeedback": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "showcoordinates": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:integer",
-                            "executable": true
+                            "parser": "brigadier:integer"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "showdeathmessages": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "showtags": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "spawnradius": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:integer",
-                            "executable": true
+                            "parser": "brigadier:integer"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "tntexplodes": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:integer",
-                            "executable": true
+                            "parser": "brigadier:integer"
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -1379,8 +1212,7 @@
             "type": "literal",
             "children": {
                 "runthis": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "run": {
                     "type": "literal",
@@ -1394,8 +1226,7 @@
                             "children": {
                                 "rotationSteps": {
                                     "type": "argument",
-                                    "parser": "brigadier:integer",
-                                    "executable": true
+                                    "parser": "brigadier:integer"
                                 },
                                 "stopOnFailure": {
                                     "type": "argument",
@@ -1410,16 +1241,13 @@
                                             "children": {
                                                 "rotationSteps": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:integer",
-                                                    "executable": true
+                                                    "parser": "brigadier:integer"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 },
@@ -1435,22 +1263,17 @@
                             "children": {
                                 "rotationSteps": {
                                     "type": "argument",
-                                    "parser": "brigadier:integer",
-                                    "executable": true
+                                    "parser": "brigadier:integer"
                                 }
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "clearall": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "pos": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "create": {
                     "type": "literal",
@@ -1472,23 +1295,18 @@
                                             "children": {
                                                 "depth": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:integer",
-                                                    "executable": true
+                                                    "parser": "brigadier:integer"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 },
                 "runthese": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 }
             }
         },
@@ -1523,17 +1341,13 @@
                                             "children": {
                                                 "components": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:nbt_compound_tag",
-                                                    "executable": true
+                                                    "parser": "minecraft:nbt_compound_tag"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -1547,27 +1361,22 @@
                     "parser": "brigadier:string",
                     "properties": {
                         "type": "greedy"
-                    },
-                    "executable": true
+                    }
                 },
                 "page": {
                     "type": "argument",
-                    "parser": "brigadier:integer",
-                    "executable": true
+                    "parser": "brigadier:integer"
                 }
-            },
-            "executable": true
+            }
         },
         "immutableworld": {
             "type": "literal",
             "children": {
                 "value": {
                     "type": "argument",
-                    "parser": "brigadier:bool",
-                    "executable": true
+                    "parser": "brigadier:bool"
                 }
-            },
-            "executable": true
+            }
         },
         "kick": {
             "type": "literal",
@@ -1582,11 +1391,9 @@
                     "children": {
                         "reason": {
                             "type": "argument",
-                            "parser": "minecraft:message",
-                            "executable": true
+                            "parser": "minecraft:message"
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -1599,74 +1406,57 @@
                     "properties": {
                         "amount": "multiple",
                         "type": "entities"
-                    },
-                    "executable": true
+                    }
                 }
-            },
-            "executable": true
+            }
         },
         "list": {
-            "type": "literal",
-            "executable": true
+            "type": "literal"
         },
         "locate": {
             "type": "literal",
             "children": {
                 "bastionremnant": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "buriedtreasure": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "endcity": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "fortress": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "mansion": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "mineshaft": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "monument": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "pillageroutpost": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "ruinedportal": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "ruins": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "shipwreck": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "stronghold": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "temple": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "village": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 }
             }
         },
@@ -1689,19 +1479,15 @@
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:item_stack",
-                                                    "executable": true
+                                                    "parser": "minecraft:item_stack"
                                                 },
                                                 "mainhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "offhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 },
@@ -1717,19 +1503,15 @@
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:item_stack",
-                                                    "executable": true
+                                                    "parser": "minecraft:item_stack"
                                                 },
                                                 "mainhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "offhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
@@ -1753,19 +1535,15 @@
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:item_stack",
-                                                    "executable": true
+                                                    "parser": "minecraft:item_stack"
                                                 },
                                                 "mainhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "offhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 },
@@ -1781,19 +1559,15 @@
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:item_stack",
-                                                    "executable": true
+                                                    "parser": "minecraft:item_stack"
                                                 },
                                                 "mainhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "offhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
@@ -1817,19 +1591,15 @@
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:item_stack",
-                                                    "executable": true
+                                                    "parser": "minecraft:item_stack"
                                                 },
                                                 "mainhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "offhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 },
@@ -1845,19 +1615,15 @@
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:item_stack",
-                                                    "executable": true
+                                                    "parser": "minecraft:item_stack"
                                                 },
                                                 "mainhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "offhand": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
@@ -1875,11 +1641,9 @@
                     "parser": "brigadier:string",
                     "properties": {
                         "type": "greedy"
-                    },
-                    "executable": true
+                    }
                 }
-            },
-            "executable": true
+            }
         },
         "mobevent": {
             "type": "literal",
@@ -1889,44 +1653,36 @@
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "minecraft:ender_dragon_event": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "minecraft:pillager_patrols_event": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "minecraft:wandering_trader_event": {
                     "type": "literal",
                     "children": {
                         "value": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -1943,11 +1699,9 @@
                     "children": {
                         "message": {
                             "type": "argument",
-                            "parser": "minecraft:message",
-                            "executable": true
+                            "parser": "minecraft:message"
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -1977,21 +1731,16 @@
                                             },
                                             "children": {
                                                 "loop": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "play_once": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 },
@@ -2018,21 +1767,16 @@
                                             },
                                             "children": {
                                                 "loop": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "play_once": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 },
@@ -2044,11 +1788,9 @@
                             "parser": "brigadier:float",
                             "properties": {
                                 "min": 0.0
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "volume": {
                     "type": "literal",
@@ -2059,8 +1801,7 @@
                             "properties": {
                                 "min": 0.0,
                                 "max": 1.0
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -2071,8 +1812,7 @@
             "children": {
                 "targets": {
                     "type": "argument",
-                    "parser": "minecraft:game_profile",
-                    "executable": true
+                    "parser": "minecraft:game_profile"
                 }
             }
         },
@@ -2085,11 +1825,9 @@
                     "children": {
                         "pos": {
                             "type": "argument",
-                            "parser": "minecraft:vec3",
-                            "executable": true
+                            "parser": "minecraft:vec3"
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -2134,20 +1872,15 @@
                                                             "parser": "brigadier:string",
                                                             "properties": {
                                                                 "type": "phrase"
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -2193,29 +1926,22 @@
                                                             "properties": {
                                                                 "min": 0.0,
                                                                 "max": 1.0
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
         "reload": {
-            "type": "literal",
-            "executable": true
+            "type": "literal"
         },
         "replaceitem": {
             "type": "literal",
@@ -2255,17 +1981,13 @@
                                                                     "children": {
                                                                         "components": {
                                                                             "type": "argument",
-                                                                            "parser": "minecraft:nbt_compound_tag",
-                                                                            "executable": true
+                                                                            "parser": "minecraft:nbt_compound_tag"
                                                                         }
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 },
                                                 "destroy": {
                                                     "type": "literal",
@@ -2291,17 +2013,13 @@
                                                                             "children": {
                                                                                 "components": {
                                                                                     "type": "argument",
-                                                                                    "parser": "minecraft:nbt_compound_tag",
-                                                                                    "executable": true
+                                                                                    "parser": "minecraft:nbt_compound_tag"
                                                                                 }
-                                                                            },
-                                                                            "executable": true
+                                                                            }
                                                                         }
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
                                                     }
                                                 },
@@ -2329,17 +2047,13 @@
                                                                             "children": {
                                                                                 "components": {
                                                                                     "type": "argument",
-                                                                                    "parser": "minecraft:nbt_compound_tag",
-                                                                                    "executable": true
+                                                                                    "parser": "minecraft:nbt_compound_tag"
                                                                                 }
-                                                                            },
-                                                                            "executable": true
+                                                                            }
                                                                         }
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -2391,17 +2105,13 @@
                                                                     "children": {
                                                                         "components": {
                                                                             "type": "argument",
-                                                                            "parser": "minecraft:nbt_compound_tag",
-                                                                            "executable": true
+                                                                            "parser": "minecraft:nbt_compound_tag"
                                                                         }
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 },
                                                 "destroy": {
                                                     "type": "literal",
@@ -2427,17 +2137,13 @@
                                                                             "children": {
                                                                                 "components": {
                                                                                     "type": "argument",
-                                                                                    "parser": "minecraft:nbt_compound_tag",
-                                                                                    "executable": true
+                                                                                    "parser": "minecraft:nbt_compound_tag"
                                                                                 }
-                                                                            },
-                                                                            "executable": true
+                                                                            }
                                                                         }
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
                                                     }
                                                 },
@@ -2465,17 +2171,13 @@
                                                                             "children": {
                                                                                 "components": {
                                                                                     "type": "argument",
-                                                                                    "parser": "minecraft:nbt_compound_tag",
-                                                                                    "executable": true
+                                                                                    "parser": "minecraft:nbt_compound_tag"
                                                                                 }
-                                                                            },
-                                                                            "executable": true
+                                                                            }
                                                                         }
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -2515,42 +2217,33 @@
                                             "type": "literal",
                                             "children": {
                                                 "if_group_fits": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "until_full": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         },
                                         "teleport_rider": {
                                             "type": "literal",
                                             "children": {
                                                 "if_group_fits": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "until_full": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         },
                         "stop_riding": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "evict_riders": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "summon_rider": {
                             "type": "literal",
@@ -2571,14 +2264,11 @@
                                                     "parser": "brigadier:string",
                                                     "properties": {
                                                         "type": "greedy"
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         },
@@ -2604,14 +2294,11 @@
                                                             "parser": "brigadier:string",
                                                             "properties": {
                                                                 "type": "greedy"
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         },
                                         "reassign_rides": {
                                             "type": "literal",
@@ -2628,14 +2315,11 @@
                                                             "parser": "brigadier:string",
                                                             "properties": {
                                                                 "type": "greedy"
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         },
                                         "skip_riders": {
                                             "type": "literal",
@@ -2652,17 +2336,13 @@
                                                             "parser": "brigadier:string",
                                                             "properties": {
                                                                 "type": "greedy"
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -2674,16 +2354,13 @@
             "type": "literal",
             "children": {
                 "hold": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "query": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 },
                 "resume": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 }
             }
         },
@@ -2692,8 +2369,7 @@
             "children": {
                 "message": {
                     "type": "argument",
-                    "parser": "minecraft:message",
-                    "executable": true
+                    "parser": "minecraft:message"
                 }
             }
         },
@@ -2716,8 +2392,7 @@
                                             "children": {
                                                 "function": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:function",
-                                                    "executable": true
+                                                    "parser": "minecraft:function"
                                                 }
                                             }
                                         }
@@ -2739,8 +2414,7 @@
                                                     "children": {
                                                         "function": {
                                                             "type": "argument",
-                                                            "parser": "minecraft:function",
-                                                            "executable": true
+                                                            "parser": "minecraft:function"
                                                         }
                                                     }
                                                 }
@@ -2760,8 +2434,7 @@
                                             "children": {
                                                 "function": {
                                                     "type": "argument",
-                                                    "parser": "minecraft:function",
-                                                    "executable": true
+                                                    "parser": "minecraft:function"
                                                 }
                                             }
                                         }
@@ -2798,27 +2471,23 @@
                                                     "parser": "brigadier:string",
                                                     "properties": {
                                                         "type": "greedy"
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
                             }
                         },
                         "list": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "remove": {
                             "type": "literal",
                             "children": {
                                 "objective": {
                                     "type": "argument",
-                                    "parser": "minecraft:objective",
-                                    "executable": true
+                                    "parser": "minecraft:objective"
                                 }
                             }
                         },
@@ -2826,36 +2495,29 @@
                             "type": "literal",
                             "children": {
                                 "belowname": {
-                                    "type": "literal",
-                                    "executable": true
+                                    "type": "literal"
                                 },
                                 "list": {
                                     "type": "literal",
                                     "children": {
                                         "ascending": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         },
                                         "descending": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 },
                                 "sidebar": {
                                     "type": "literal",
                                     "children": {
                                         "ascending": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         },
                                         "descending": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -2883,8 +2545,7 @@
                                                     "parser": "brigadier:integer",
                                                     "properties": {
                                                         "min": 0
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
                                             }
                                         }
@@ -2900,11 +2561,9 @@
                                     "parser": "minecraft:score_holder",
                                     "properties": {
                                         "amount": "single"
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "operation": {
                             "type": "literal",
@@ -2933,8 +2592,7 @@
                                                             "children": {
                                                                 "sourceObjective": {
                                                                     "type": "argument",
-                                                                    "parser": "minecraft:objective",
-                                                                    "executable": true
+                                                                    "parser": "minecraft:objective"
                                                                 }
                                                             }
                                                         }
@@ -2966,8 +2624,7 @@
                                                     "children": {
                                                         "max": {
                                                             "type": "argument",
-                                                            "parser": "brigadier:integer",
-                                                            "executable": true
+                                                            "parser": "brigadier:integer"
                                                         }
                                                     }
                                                 }
@@ -2996,8 +2653,7 @@
                                                     "parser": "brigadier:integer",
                                                     "properties": {
                                                         "min": 0
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
                                             }
                                         }
@@ -3017,11 +2673,9 @@
                                     "children": {
                                         "objective": {
                                             "type": "argument",
-                                            "parser": "minecraft:objective",
-                                            "executable": true
+                                            "parser": "minecraft:objective"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         },
@@ -3041,8 +2695,7 @@
                                             "children": {
                                                 "score": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:integer",
-                                                    "executable": true
+                                                    "parser": "brigadier:integer"
                                                 }
                                             }
                                         }
@@ -3070,11 +2723,9 @@
                                                     "children": {
                                                         "max": {
                                                             "type": "argument",
-                                                            "parser": "brigadier:integer",
-                                                            "executable": true
+                                                            "parser": "brigadier:integer"
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
                                             }
                                         }
@@ -3105,41 +2756,32 @@
                                     },
                                     "children": {
                                         "destroy": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         },
                                         "keep": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         },
                                         "replace": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 },
                                 "blockStates": {
                                     "type": "argument",
                                     "parser": "minecraft:block_state",
                                     "children": {
                                         "destroy": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         },
                                         "keep": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         },
                                         "replace": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -3153,8 +2795,7 @@
                     "parser": "brigadier:integer",
                     "properties": {
                         "min": 1
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -3163,11 +2804,9 @@
             "children": {
                 "pos": {
                     "type": "argument",
-                    "parser": "minecraft:block_pos",
-                    "executable": true
+                    "parser": "minecraft:block_pos"
                 }
-            },
-            "executable": true
+            }
         },
         "spawnpoint": {
             "type": "literal",
@@ -3182,14 +2821,11 @@
                     "children": {
                         "pos": {
                             "type": "argument",
-                            "parser": "minecraft:block_pos",
-                            "executable": true
+                            "parser": "minecraft:block_pos"
                         }
-                    },
-                    "executable": true
+                    }
                 }
-            },
-            "executable": true
+            }
         },
         "spreadplayers": {
             "type": "literal",
@@ -3218,8 +2854,7 @@
                                             "properties": {
                                                 "amount": "multiple",
                                                 "type": "entities"
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
@@ -3236,8 +2871,7 @@
                     "type": "literal",
                     "children": {
                         "close": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "connect": {
                             "type": "literal",
@@ -3251,8 +2885,7 @@
                                     "children": {
                                         "port": {
                                             "type": "argument",
-                                            "parser": "brigadier:integer",
-                                            "executable": true
+                                            "parser": "brigadier:integer"
                                         }
                                     }
                                 }
@@ -3263,8 +2896,7 @@
                             "children": {
                                 "port": {
                                     "type": "argument",
-                                    "parser": "brigadier:integer",
-                                    "executable": true
+                                    "parser": "brigadier:integer"
                                 }
                             }
                         }
@@ -3285,11 +2917,9 @@
                     "children": {
                         "sound": {
                             "type": "argument",
-                            "parser": "minecraft:resource_location",
-                            "executable": true
+                            "parser": "minecraft:resource_location"
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -3319,26 +2949,20 @@
                                                     "parser": "brigadier:bool",
                                                     "children": {
                                                         "disk": {
-                                                            "type": "literal",
-                                                            "executable": true
+                                                            "type": "literal"
                                                         },
                                                         "memory": {
-                                                            "type": "literal",
-                                                            "executable": true
+                                                            "type": "literal"
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 },
                                                 "disk": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 },
                                                 "memory": {
-                                                    "type": "literal",
-                                                    "executable": true
+                                                    "type": "literal"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
@@ -3389,17 +3013,13 @@
                                                                                     "parser": "brigadier:string",
                                                                                     "properties": {
                                                                                         "type": "word"
-                                                                                    },
-                                                                                    "executable": true
+                                                                                    }
                                                                                 }
-                                                                            },
-                                                                            "executable": true
+                                                                            }
                                                                         }
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         },
                                                         "animationMode": {
                                                             "type": "argument",
@@ -3436,32 +3056,23 @@
                                                                                                     "parser": "brigadier:string",
                                                                                                     "properties": {
                                                                                                         "type": "word"
-                                                                                                    },
-                                                                                                    "executable": true
+                                                                                                    }
                                                                                                 }
-                                                                                            },
-                                                                                            "executable": true
+                                                                                            }
                                                                                         }
-                                                                                    },
-                                                                                    "executable": true
+                                                                                    }
                                                                                 }
-                                                                            },
-                                                                            "executable": true
+                                                                            }
                                                                         }
-                                                                    },
-                                                                    "executable": true
+                                                                    }
                                                                 }
-                                                            },
-                                                            "executable": true
+                                                            }
                                                         }
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -3475,8 +3086,7 @@
                             "parser": "brigadier:string",
                             "properties": {
                                 "type": "greedy"
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -3498,11 +3108,9 @@
                             "children": {
                                 "pos": {
                                     "type": "argument",
-                                    "parser": "minecraft:vec3",
-                                    "executable": true
+                                    "parser": "minecraft:vec3"
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "pos": {
                             "type": "argument",
@@ -3520,17 +3128,13 @@
                                             "parser": "brigadier:string",
                                             "properties": {
                                                 "type": "greedy"
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -3553,14 +3157,12 @@
                                     "parser": "brigadier:string",
                                     "properties": {
                                         "type": "word"
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         },
                         "list": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "remove": {
                             "type": "literal",
@@ -3570,8 +3172,7 @@
                                     "parser": "brigadier:string",
                                     "properties": {
                                         "type": "word"
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -3588,8 +3189,7 @@
                     "children": {
                         "checkForBlocks": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         },
                         "rotation": {
                             "type": "argument",
@@ -3597,11 +3197,9 @@
                             "children": {
                                 "checkForBlocks": {
                                     "type": "argument",
-                                    "parser": "brigadier:bool",
-                                    "executable": true
+                                    "parser": "brigadier:bool"
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "facing": {
                             "type": "literal",
@@ -3612,11 +3210,9 @@
                                     "children": {
                                         "checkForBlocks": {
                                             "type": "argument",
-                                            "parser": "brigadier:bool",
-                                            "executable": true
+                                            "parser": "brigadier:bool"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 },
                                 "facingEntity": {
                                     "type": "argument",
@@ -3628,16 +3224,13 @@
                                     "children": {
                                         "checkForBlocks": {
                                             "type": "argument",
-                                            "parser": "brigadier:bool",
-                                            "executable": true
+                                            "parser": "brigadier:bool"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "targets": {
                     "type": "argument",
@@ -3649,8 +3242,7 @@
                     "children": {
                         "checkForBlocks": {
                             "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
+                            "parser": "brigadier:bool"
                         },
                         "target": {
                             "type": "argument",
@@ -3662,11 +3254,9 @@
                             "children": {
                                 "checkForBlocks": {
                                     "type": "argument",
-                                    "parser": "brigadier:bool",
-                                    "executable": true
+                                    "parser": "brigadier:bool"
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "destination": {
                             "type": "argument",
@@ -3678,11 +3268,9 @@
                                     "children": {
                                         "checkForBlocks": {
                                             "type": "argument",
-                                            "parser": "brigadier:bool",
-                                            "executable": true
+                                            "parser": "brigadier:bool"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 },
                                 "facing": {
                                     "type": "literal",
@@ -3693,11 +3281,9 @@
                                             "children": {
                                                 "checkForBlocks": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:bool",
-                                                    "executable": true
+                                                    "parser": "brigadier:bool"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         },
                                         "facingEntity": {
                                             "type": "argument",
@@ -3709,16 +3295,13 @@
                                             "children": {
                                                 "checkForBlocks": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:bool",
-                                                    "executable": true
+                                                    "parser": "brigadier:bool"
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -3743,8 +3326,7 @@
                     "children": {
                         "message": {
                             "type": "argument",
-                            "parser": "minecraft:component",
-                            "executable": true
+                            "parser": "minecraft:component"
                         }
                     }
                 }
@@ -3759,8 +3341,7 @@
                     "properties": {
                         "amount": "multiple",
                         "type": "entities"
-                    },
-                    "executable": true
+                    }
                 }
             }
         },
@@ -3780,11 +3361,9 @@
                                     "parser": "brigadier:integer",
                                     "properties": {
                                         "min": -1
-                                    },
-                                    "executable": true
+                                    }
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 }
@@ -3806,15 +3385,12 @@
                                     "parser": "minecraft:block_pos",
                                     "children": {
                                         "all": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         },
                                         "masked": {
-                                            "type": "literal",
-                                            "executable": true
+                                            "type": "literal"
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         }
@@ -3841,11 +3417,9 @@
                                             "parser": "brigadier:string",
                                             "properties": {
                                                 "type": "greedy"
-                                            },
-                                            "executable": true
+                                            }
                                         }
-                                    },
-                                    "executable": true
+                                    }
                                 }
                             }
                         },
@@ -3868,11 +3442,9 @@
                                                     "parser": "brigadier:string",
                                                     "properties": {
                                                         "type": "greedy"
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
@@ -3892,11 +3464,9 @@
                             "children": {
                                 "preload": {
                                     "type": "argument",
-                                    "parser": "brigadier:bool",
-                                    "executable": true
+                                    "parser": "brigadier:bool"
                                 }
-                            },
-                            "executable": true
+                            }
                         },
                         "pos": {
                             "type": "argument",
@@ -3904,11 +3474,9 @@
                             "children": {
                                 "preload": {
                                     "type": "argument",
-                                    "parser": "brigadier:bool",
-                                    "executable": true
+                                    "parser": "brigadier:bool"
                                 }
-                            },
-                            "executable": true
+                            }
                         }
                     }
                 },
@@ -3920,13 +3488,11 @@
                             "parser": "brigadier:string",
                             "properties": {
                                 "type": "greedy"
-                            },
-                            "executable": true
+                            }
                         },
                         "pos": {
                             "type": "argument",
-                            "parser": "minecraft:block_pos",
-                            "executable": true
+                            "parser": "minecraft:block_pos"
                         }
                     }
                 },
@@ -3934,15 +3500,12 @@
                     "type": "literal",
                     "children": {
                         "all-dimensions": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "remove_all": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 }
             }
         },
@@ -3954,8 +3517,7 @@
                     "children": {
                         "time": {
                             "type": "argument",
-                            "parser": "minecraft:time",
-                            "executable": true
+                            "parser": "minecraft:time"
                         }
                     }
                 },
@@ -3963,16 +3525,13 @@
                     "type": "literal",
                     "children": {
                         "day": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "daytime": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "gametime": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         }
                     }
                 },
@@ -3980,33 +3539,26 @@
                     "type": "literal",
                     "children": {
                         "day": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "midnight": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "night": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "noon": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "sunrise": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "sunset": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "time": {
                             "type": "argument",
-                            "parser": "minecraft:time",
-                            "executable": true
+                            "parser": "minecraft:time"
                         }
                     }
                 }
@@ -4028,26 +3580,22 @@
                             "children": {
                                 "title": {
                                     "type": "argument",
-                                    "parser": "minecraft:message",
-                                    "executable": true
+                                    "parser": "minecraft:message"
                                 }
                             }
                         },
                         "clear": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "reset": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "subtitle": {
                             "type": "literal",
                             "children": {
                                 "title": {
                                     "type": "argument",
-                                    "parser": "minecraft:message",
-                                    "executable": true
+                                    "parser": "minecraft:message"
                                 }
                             }
                         },
@@ -4073,8 +3621,7 @@
                                                     "parser": "brigadier:integer",
                                                     "properties": {
                                                         "min": 0
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
                                             }
                                         }
@@ -4087,8 +3634,7 @@
                             "children": {
                                 "title": {
                                     "type": "argument",
-                                    "parser": "minecraft:message",
-                                    "executable": true
+                                    "parser": "minecraft:message"
                                 }
                             }
                         }
@@ -4112,26 +3658,22 @@
                             "children": {
                                 "title": {
                                     "type": "argument",
-                                    "parser": "minecraft:component",
-                                    "executable": true
+                                    "parser": "minecraft:component"
                                 }
                             }
                         },
                         "clear": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "reset": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         },
                         "subtitle": {
                             "type": "literal",
                             "children": {
                                 "title": {
                                     "type": "argument",
-                                    "parser": "minecraft:component",
-                                    "executable": true
+                                    "parser": "minecraft:component"
                                 }
                             }
                         },
@@ -4157,8 +3699,7 @@
                                                     "parser": "brigadier:integer",
                                                     "properties": {
                                                         "min": 0
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
                                             }
                                         }
@@ -4171,8 +3712,7 @@
                             "children": {
                                 "title": {
                                     "type": "argument",
-                                    "parser": "minecraft:component",
-                                    "executable": true
+                                    "parser": "minecraft:component"
                                 }
                             }
                         }
@@ -4181,8 +3721,7 @@
             }
         },
         "toggledownfall": {
-            "type": "literal",
-            "executable": true
+            "type": "literal"
         },
         "tp": {
             "type": "literal",
@@ -4202,8 +3741,7 @@
                     "children": {
                         "port": {
                             "type": "argument",
-                            "parser": "brigadier:integer",
-                            "executable": true
+                            "parser": "brigadier:integer"
                         }
                     }
                 }
@@ -4235,11 +3773,9 @@
                                                     "parser": "brigadier:string",
                                                     "properties": {
                                                         "type": "greedy"
-                                                    },
-                                                    "executable": true
+                                                    }
                                                 }
-                                            },
-                                            "executable": true
+                                            }
                                         }
                                     }
                                 }
@@ -4255,13 +3791,11 @@
                             "parser": "brigadier:string",
                             "properties": {
                                 "type": "greedy"
-                            },
-                            "executable": true
+                            }
                         },
                         "pos": {
                             "type": "argument",
-                            "parser": "minecraft:block_pos",
-                            "executable": true
+                            "parser": "minecraft:block_pos"
                         }
                     }
                 },
@@ -4269,15 +3803,12 @@
                     "type": "literal",
                     "children": {
                         "all-dimensions": {
-                            "type": "literal",
-                            "executable": true
+                            "type": "literal"
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "remove_all": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 }
             }
         },
@@ -4299,11 +3830,9 @@
                             "properties": {
                                 "min": 0,
                                 "max": 1000000
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "rain": {
                     "type": "literal",
@@ -4314,11 +3843,9 @@
                             "properties": {
                                 "min": 0,
                                 "max": 1000000
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "thunder": {
                     "type": "literal",
@@ -4329,21 +3856,17 @@
                             "properties": {
                                 "min": 0,
                                 "max": 1000000
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 },
                 "query": {
-                    "type": "literal",
-                    "executable": true
+                    "type": "literal"
                 }
             }
         },
         "worldbuilder": {
-            "type": "literal",
-            "executable": true
+            "type": "literal"
         },
         "wsserver": {
             "type": "literal",
@@ -4364,11 +3887,9 @@
                             "properties": {
                                 "amount": "multiple",
                                 "type": "players"
-                            },
-                            "executable": true
+                            }
                         }
-                    },
-                    "executable": true
+                    }
                 }
             }
         }
