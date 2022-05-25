@@ -715,10 +715,7 @@
                                                     ]
                                                 }
                                             },
-                                            "executable": true,
-                                            "redirect": [
-                                                "execute"
-                                            ]
+                                            "executable": true
                                         }
                                     }
                                 }
@@ -957,10 +954,7 @@
                                                     ]
                                                 }
                                             },
-                                            "executable": true,
-                                            "redirect": [
-                                                "execute"
-                                            ]
+                                            "executable": true
                                         }
                                     }
                                 }
@@ -1168,13 +1162,6 @@
                 "positioned": {
                     "type": "literal",
                     "children": {
-                        "pos": {
-                            "type": "argument",
-                            "parser": "minecraft:vec3",
-                            "redirect": [
-                                "execute"
-                            ]
-                        },
                         "as": {
                             "type": "literal",
                             "children": {
@@ -1190,6 +1177,13 @@
                                     ]
                                 }
                             }
+                        },
+                        "pos": {
+                            "type": "argument",
+                            "parser": "minecraft:vec3",
+                            "redirect": [
+                                "execute"
+                            ]
                         }
                     }
                 },
