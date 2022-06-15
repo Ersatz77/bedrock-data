@@ -2126,7 +2126,24 @@
         "locate": {
             "type": "literal",
             "children": {
-                "structure": {
+                "biome": {
+                    "type": "literal",
+                    "children": {
+                        "biome": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_location",
+                            "children": {
+                                "useNewChunksOnly": {
+                                    "type": "argument",
+                                    "parser": "brigadier:bool",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                },
+                "feature": {
                     "type": "argument",
                     "parser": "minecraft:resource_location",
                     "children": {
@@ -2137,6 +2154,23 @@
                         }
                     },
                     "executable": true
+                },
+                "structure": {
+                    "type": "literal",
+                    "children": {
+                        "structure": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_location",
+                            "children": {
+                                "useNewChunksOnly": {
+                                    "type": "argument",
+                                    "parser": "brigadier:bool",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
                 }
             }
         },
