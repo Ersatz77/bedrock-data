@@ -2132,28 +2132,9 @@
                         "biome": {
                             "type": "argument",
                             "parser": "minecraft:resource_location",
-                            "children": {
-                                "useNewChunksOnly": {
-                                    "type": "argument",
-                                    "parser": "brigadier:bool",
-                                    "executable": true
-                                }
-                            },
                             "executable": true
                         }
                     }
-                },
-                "feature": {
-                    "type": "argument",
-                    "parser": "minecraft:resource_location",
-                    "children": {
-                        "useNewChunksOnly": {
-                            "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
-                        }
-                    },
-                    "executable": true
                 },
                 "structure": {
                     "type": "literal",
@@ -4033,19 +4014,26 @@
                                                                     "type": "argument",
                                                                     "parser": "brigadier:bool",
                                                                     "children": {
-                                                                        "integrity": {
+                                                                        "waterlogged": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "properties": {
-                                                                                "min": 0.0,
-                                                                                "max": 1.0
-                                                                            },
+                                                                            "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "seed": {
+                                                                                "integrity": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:string",
+                                                                                    "parser": "brigadier:float",
                                                                                     "properties": {
-                                                                                        "type": "word"
+                                                                                        "min": 0.0,
+                                                                                        "max": 1.0
+                                                                                    },
+                                                                                    "children": {
+                                                                                        "seed": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:string",
+                                                                                            "properties": {
+                                                                                                "type": "word"
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        }
                                                                                     },
                                                                                     "executable": true
                                                                                 }
@@ -4080,19 +4068,26 @@
                                                                                     "type": "argument",
                                                                                     "parser": "brigadier:bool",
                                                                                     "children": {
-                                                                                        "integrity": {
+                                                                                        "waterlogged": {
                                                                                             "type": "argument",
-                                                                                            "parser": "brigadier:float",
-                                                                                            "properties": {
-                                                                                                "min": 0.0,
-                                                                                                "max": 1.0
-                                                                                            },
+                                                                                            "parser": "brigadier:bool",
                                                                                             "children": {
-                                                                                                "seed": {
+                                                                                                "integrity": {
                                                                                                     "type": "argument",
-                                                                                                    "parser": "brigadier:string",
+                                                                                                    "parser": "brigadier:float",
                                                                                                     "properties": {
-                                                                                                        "type": "word"
+                                                                                                        "min": 0.0,
+                                                                                                        "max": 1.0
+                                                                                                    },
+                                                                                                    "children": {
+                                                                                                        "seed": {
+                                                                                                            "type": "argument",
+                                                                                                            "parser": "brigadier:string",
+                                                                                                            "properties": {
+                                                                                                                "type": "word"
+                                                                                                            },
+                                                                                                            "executable": true
+                                                                                                        }
                                                                                                     },
                                                                                                     "executable": true
                                                                                                 }
