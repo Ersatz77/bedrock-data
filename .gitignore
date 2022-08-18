@@ -1,2 +1,6 @@
+# Workspace files
+.vscode/
+*.code-workspace
+
 # Java commands.json I use for reference
 java_commands.json
