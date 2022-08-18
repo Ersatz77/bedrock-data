@@ -1,12 +1,15 @@
 import argparse
+from collections import defaultdict
 import requests
 import re
 import json
 import pathlib
 
 
-GAMETEST_DEPENDENCY_PATTERN = re.compile(r'(?<=```json).*?(?=```)')
-GAMETEST_DEPENDENCY_COMMENT = re.compile(r'(?<=)\/\/ .*? (?=)')
+GAMETEST_HEADER_PATTERN = re.compile(r'^---.*?---$\n', flags=re.DOTALL | re.MULTILINE)
+GAMETEST_MODULE_DESCRIPTION_PATTERN = re.compile(r'^[^#>](.*)\n$', flags=re.MULTILINE)
+GAMETEST_DEPENDENCY_PATTERN = re.compile(r'(?<=^```json)(.*?)(?=```$)', flags=re.DOTALL | re.MULTILINE)
+GAMETEST_DEPENDENCY_COMMENT_PATTERN = re.compile(r'\/\/ .*?\n')
 
 
 def main():
@@ -41,19 +44,20 @@ def generate_gametest_module_info(gametest_urls: list[str], output_dir: pathlib.
     urls = [(i.split('/')[-2], i) for i in gametest_urls]
 
     # Get info from each markdown file
-    module_info: dict = {}
+    module_info: dict = defaultdict(dict)
     for name, url in urls:
         try:
             rq = requests.get(url)
             rq.raise_for_status()
 
-            # Make response text be on a single line
-            text: str = ' '.join(rq.text.split())
+            # Remove the header
+            text = GAMETEST_HEADER_PATTERN.sub('', rq.text)
 
             # Extract manifest dependency and remove its comment
             if match := GAMETEST_DEPENDENCY_PATTERN.search(text):
-                dependency = GAMETEST_DEPENDENCY_COMMENT.sub('', match.group())
-                module_info[name] = json.loads(dependency)
+                dependency = json.loads(GAMETEST_DEPENDENCY_COMMENT_PATTERN.sub('', match.group()))
+                module_info[name]['uuid'] = dependency['uuid']
+                module_info[name]['version'] = dependency['version']
 
         except requests.HTTPError as http_ex:
             print(http_ex)
