@@ -3907,6 +3907,15 @@
                             "executable": true
                         }
                     }
+                },
+                "watchdog": {
+                    "type": "literal",
+                    "children": {
+                        "exportstats": {
+                            "type": "literal",
+                            "executable": true
+                        }
+                    }
                 }
             }
         },
