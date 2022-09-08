@@ -1187,6 +1187,34 @@
                         }
                     }
                 },
+                "rotated": {
+                    "type": "literal",
+                    "children": {
+                        "as": {
+                            "type": "literal",
+                            "children": {
+                                "targets": {
+                                    "type": "argument",
+                                    "parser": "minecraft:entity",
+                                    "properties": {
+                                        "type": "entities",
+                                        "amount": "multiple"
+                                    },
+                                    "redirect": [
+                                        "execute"
+                                    ]
+                                }
+                            }
+                        },
+                        "rot": {
+                            "type": "argument",
+                            "parser": "minecraft:rotation",
+                            "redirect": [
+                                "execute"
+                            ]
+                        }
+                    }
+                },
                 "run": {
                     "type": "literal"
                 }
