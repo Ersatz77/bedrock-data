@@ -661,6 +661,18 @@
                         }
                     }
                 },
+                "anchored": {
+                    "type": "literal",
+                    "children": {
+                        "anchor": {
+                            "type": "argument",
+                            "parser": "minecraft:entity_anchor",
+                            "redirect": [
+                                "execute"
+                            ]
+                        }
+                    }
+                },
                 "as": {
                     "type": "literal",
                     "children": {
@@ -1202,6 +1214,18 @@
                                     }
                                 }
                             }
+                        }
+                    }
+                },
+                "in": {
+                    "type": "literal",
+                    "children": {
+                        "dimension": {
+                            "type": "argument",
+                            "parser": "minecraft:dimension",
+                            "redirect": [
+                                "execute"
+                            ]
                         }
                     }
                 },
