@@ -4377,25 +4377,18 @@
                             "type": "argument",
                             "parser": "minecraft:vec3",
                             "children": {
-                                "rot": {
+                                "spawnEvent": {
                                     "type": "argument",
-                                    "parser": "minecraft:rotation",
+                                    "parser": "brigadier:string",
+                                    "properties": {
+                                        "type": "phrase"
+                                    },
                                     "children": {
-                                        "spawnEvent": {
+                                        "name": {
                                             "type": "argument",
                                             "parser": "brigadier:string",
                                             "properties": {
-                                                "type": "phrase"
-                                            },
-                                            "children": {
-                                                "name": {
-                                                    "type": "argument",
-                                                    "parser": "brigadier:string",
-                                                    "properties": {
-                                                        "type": "greedy"
-                                                    },
-                                                    "executable": true
-                                                }
+                                                "type": "greedy"
                                             },
                                             "executable": true
                                         }
