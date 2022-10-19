@@ -6,10 +6,10 @@ import json
 import pathlib
 
 
-GAMETEST_HEADER_PATTERN = re.compile(r'^---.*?---$\n', flags=re.DOTALL | re.MULTILINE)
-GAMETEST_MODULE_DESCRIPTION_PATTERN = re.compile(r'^[^#>](.*)\n$', flags=re.MULTILINE)
-GAMETEST_DEPENDENCY_PATTERN = re.compile(r'(?<=^```json)(.*?)(?=```$)', flags=re.DOTALL | re.MULTILINE)
-GAMETEST_DEPENDENCY_COMMENT_PATTERN = re.compile(r'\/\/ .*?\n')
+SCRIPT_API_HEADER_PATTERN = re.compile(r'^---.*?---$\n', flags=re.DOTALL | re.MULTILINE)
+SCRIPT_API_MODULE_DESCRIPTION_PATTERN = re.compile(r'^[^#>](.*)\n$', flags=re.MULTILINE)
+SCRIPT_API_DEPENDENCY_PATTERN = re.compile(r'(?<=^```json)(.*?)(?=```$)', flags=re.DOTALL | re.MULTILINE)
+SCRIPT_API_DEPENDENCY_COMMENT_PATTERN = re.compile(r'\/\/ .*?\n')
 
 
 def main():
@@ -21,7 +21,7 @@ def main():
         required=True
     )
     parser.add_argument(
-        '--gametest_urls',
+        '--script_api_urls',
         help ='A list of doc URLs to get Gametest info from',
         type=str,
         default=[],
@@ -31,17 +31,17 @@ def main():
 
     args = parser.parse_args()
     output = pathlib.Path(args.output)
-    gametest_urls = args.gametest_urls
+    script_api_urls = args.script_api_urls
 
-    generate_gametest_module_info(gametest_urls, output/'gametest')
+    generate_script_api_module_info(script_api_urls, output/'script_api')
 
 
-def generate_gametest_module_info(gametest_urls: list[str], output_dir: pathlib.Path):
+def generate_script_api_module_info(script_api_urls: list[str], output_dir: pathlib.Path):
     """
-    Generates a file at 'ouput_dir' containing info about each gametest module
+    Generates a file at 'ouput_dir' containing info about each script api module
     """
     # Turn each url into '(<module_name>, url)' pairs
-    urls = [(i.split('/')[-2], i) for i in gametest_urls]
+    urls = [(i.split('/')[-2], i) for i in script_api_urls]
 
     # Get info from each markdown file
     module_info: dict = defaultdict(dict)
@@ -51,11 +51,11 @@ def generate_gametest_module_info(gametest_urls: list[str], output_dir: pathlib.
             rq.raise_for_status()
 
             # Remove the header
-            text = GAMETEST_HEADER_PATTERN.sub('', rq.text)
+            text = SCRIPT_API_HEADER_PATTERN.sub('', rq.text)
 
             # Extract manifest dependency and remove its comment
-            if match := GAMETEST_DEPENDENCY_PATTERN.search(text):
-                dependency = json.loads(GAMETEST_DEPENDENCY_COMMENT_PATTERN.sub('', match.group()))
+            if match := SCRIPT_API_DEPENDENCY_PATTERN.search(text):
+                dependency = json.loads(SCRIPT_API_DEPENDENCY_COMMENT_PATTERN.sub('', match.group()))
                 module_info[name]['uuid'] = dependency['uuid']
                 module_info[name]['version'] = dependency['version']
 
