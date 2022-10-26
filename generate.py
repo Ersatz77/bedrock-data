@@ -1,15 +1,9 @@
 import argparse
-from collections import defaultdict
-import requests
-import re
 import json
-import pathlib
+import re
+from pathlib import Path
 
-
-SCRIPT_API_HEADER_PATTERN = re.compile(r'^---.*?---$\n', flags=re.DOTALL | re.MULTILINE)
-SCRIPT_API_MODULE_DESCRIPTION_PATTERN = re.compile(r'^[^#>](.*)\n$', flags=re.MULTILINE)
-SCRIPT_API_DEPENDENCY_PATTERN = re.compile(r'(?<=^```json)(.*?)(?=```$)', flags=re.DOTALL | re.MULTILINE)
-SCRIPT_API_DEPENDENCY_COMMENT_PATTERN = re.compile(r'\/\/ .*?\n')
+import requests
 
 
 def main():
@@ -30,48 +24,58 @@ def main():
     )
 
     args = parser.parse_args()
-    output = pathlib.Path(args.output)
-    script_api_urls = args.script_api_urls
+    output = Path(args.output)
 
-    generate_script_api_module_info(script_api_urls, output/'script_api')
+    script_api_module_info(output / 'script_api', *args.script_api_urls)
 
 
-def generate_script_api_module_info(script_api_urls: list[str], output_dir: pathlib.Path):
+def script_api_module_info(output_dir: Path, *script_api_urls: str):
     """
-    Generates a file at 'ouput_dir' containing info about each script api module
-    """
-    # Turn each url into '(<module_name>, url)' pairs
-    urls = [(i.split('/')[-2], i) for i in script_api_urls]
+    Generates a file at 'ouput_dir' containing info about each script api module.
 
-    # Get info from each markdown file
-    module_info: dict = defaultdict(dict)
-    for name, url in urls:
+    `*script_api_urls` should be URLs to markdown files.
+    """
+
+    HEADER_PATTERN = re.compile(r'^---.*?---$\n', flags=re.DOTALL | re.MULTILINE)
+    MANIFEST_DETAILS_PATTERN= re.compile(r'## Manifest Details\s```json\s(.*?)```', flags=re.MULTILINE | re.DOTALL)
+    AVAILABLE_VERSIONS_PATTERN = re.compile(r'^## Available Versions\s(.*?)\s$', flags=re.MULTILINE | re.DOTALL)
+    VERSION_PATTERN = re.compile(r'\`(.*?)\`')
+
+    modules = {}
+    for name, url in ((i.split("/")[-2], i) for i in script_api_urls):
         try:
+            # Try to request the data at the URL
             rq = requests.get(url)
             rq.raise_for_status()
 
             # Remove the header
-            text = SCRIPT_API_HEADER_PATTERN.sub('', rq.text)
+            text = HEADER_PATTERN.sub('', rq.text)
+#
+            # Get module info if the manifest snippet and available versions exist
+            module_info = {}
+            if (
+                (manifest := MANIFEST_DETAILS_PATTERN.search(text)) and 
+                (versions := AVAILABLE_VERSIONS_PATTERN.search(text))
+            ):
+                # Parse the text further
+                mainfest_json = json.loads(manifest.group(1))
+                versions = [v.group(1) for v in VERSION_PATTERN.finditer(versions.group(1))]
 
-            # Extract manifest dependency and remove its comment
-            if match := SCRIPT_API_DEPENDENCY_PATTERN.search(text):
-                dependency = json.loads(SCRIPT_API_DEPENDENCY_COMMENT_PATTERN.sub('', match.group()))
-                module_info[name]['uuid'] = dependency['uuid']
-                module_info[name]['version'] = dependency['version']
+                # Create module info and add it to the dict
+                module_info["module_name"] = mainfest_json["module_name"]
+                module_info["versions"] = versions
+
+                modules[name] = module_info
 
         except requests.HTTPError as http_ex:
             print(http_ex)
-            continue
-        
+
         except Exception as ex:
             print(ex)
-            continue
 
-    # Write module info to file
-    output_dir = output_dir / 'modules.json'
-    output_dir.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_dir, 'w+') as fp:
-        fp.write(json.dumps(module_info, indent=4))
+    # Write module dict to file
+    with open(output_dir / "modules.json", "w") as file:
+        file.write(json.dumps(modules, indent=4))
 
 
 if __name__ == '__main__':
