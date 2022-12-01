@@ -4151,6 +4151,23 @@
                 }
             }
         },
+        "scriptevent": {
+            "type": "literal",
+            "children": {
+                "messageId": {
+                    "type": "argument",
+                    "parser": "minecraft:resource_location",
+                    "children": {
+                        "message": {
+                            "type": "argument",
+                            "parser": "minecraft:message",
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                }
+            }
+        },
         "stopsound": {
             "type": "literal",
             "children": {
