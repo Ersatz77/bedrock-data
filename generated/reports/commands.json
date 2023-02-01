@@ -249,14 +249,6 @@
                                                             "type": "argument",
                                                             "parser": "minecraft:block",
                                                             "children": {
-                                                                "data": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:integer",
-                                                                    "properties": {
-                                                                        "min": -1
-                                                                    },
-                                                                    "executable": true
-                                                                },
                                                                 "blockStates": {
                                                                     "type": "argument",
                                                                     "parser": "minecraft:block_state",
@@ -273,14 +265,6 @@
                                                             "type": "argument",
                                                             "parser": "minecraft:block",
                                                             "children": {
-                                                                "data": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:integer",
-                                                                    "properties": {
-                                                                        "min": -1
-                                                                    },
-                                                                    "executable": true
-                                                                },
                                                                 "blockStates": {
                                                                     "type": "argument",
                                                                     "parser": "minecraft:block_state",
@@ -297,14 +281,6 @@
                                                             "type": "argument",
                                                             "parser": "minecraft:block",
                                                             "children": {
-                                                                "data": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:integer",
-                                                                    "properties": {
-                                                                        "min": -1
-                                                                    },
-                                                                    "executable": true
-                                                                },
                                                                 "blockStates": {
                                                                     "type": "argument",
                                                                     "parser": "minecraft:block_state",
@@ -760,17 +736,6 @@
                                                     "redirect": [
                                                         "execute"
                                                     ]
-                                                },
-                                                "data": {
-                                                    "type": "argument",
-                                                    "parser": "brigadier:integer",
-                                                    "properties": {
-                                                        "min": -1
-                                                    },
-                                                    "executable": true,
-                                                    "redirect": [
-                                                        "execute"
-                                                    ]
                                                 }
                                             },
                                             "executable": true
@@ -995,17 +960,6 @@
                                                 "blockStates": {
                                                     "type": "argument",
                                                     "parser": "minecraft:block_state",
-                                                    "executable": true,
-                                                    "redirect": [
-                                                        "execute"
-                                                    ]
-                                                },
-                                                "data": {
-                                                    "type": "argument",
-                                                    "parser": "brigadier:integer",
-                                                    "properties": {
-                                                        "min": -1
-                                                    },
                                                     "executable": true,
                                                     "redirect": [
                                                         "execute"
@@ -1333,53 +1287,6 @@
                                     "type": "argument",
                                     "parser": "minecraft:block",
                                     "children": {
-                                        "data": {
-                                            "type": "argument",
-                                            "parser": "brigadier:integer",
-                                            "properties": {
-                                                "min": 0
-                                            },
-                                            "children": {
-                                                "destroy": {
-                                                    "type": "literal",
-                                                    "executable": true
-                                                },
-                                                "hollow": {
-                                                    "type": "literal",
-                                                    "executable": true
-                                                },
-                                                "keep": {
-                                                    "type": "literal",
-                                                    "executable": true
-                                                },
-                                                "outline": {
-                                                    "type": "literal",
-                                                    "executable": true
-                                                },
-                                                "replace": {
-                                                    "type": "literal",
-                                                    "children": {
-                                                        "block": {
-                                                            "type": "argument",
-                                                            "parser": "minecraft:block",
-                                                            "children": {
-                                                                "data": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:integer",
-                                                                    "properties": {
-                                                                        "min": -1
-                                                                    },
-                                                                    "executable": true
-                                                                }
-                                                            },
-                                                            "executable": true
-                                                        }
-                                                    },
-                                                    "executable": true
-                                                }
-                                            },
-                                            "executable": true
-                                        },
                                         "blockStates": {
                                             "type": "argument",
                                             "parser": "minecraft:block_state",
@@ -3954,28 +3861,6 @@
                             "type": "argument",
                             "parser": "minecraft:block",
                             "children": {
-                                "data": {
-                                    "type": "argument",
-                                    "parser": "brigadier:integer",
-                                    "properties": {
-                                        "min": -1
-                                    },
-                                    "children": {
-                                        "destroy": {
-                                            "type": "literal",
-                                            "executable": true
-                                        },
-                                        "keep": {
-                                            "type": "literal",
-                                            "executable": true
-                                        },
-                                        "replace": {
-                                            "type": "literal",
-                                            "executable": true
-                                        }
-                                    },
-                                    "executable": true
-                                },
                                 "blockStates": {
                                     "type": "argument",
                                     "parser": "minecraft:block_state",
@@ -4685,12 +4570,9 @@
                             "type": "argument",
                             "parser": "minecraft:block_predicate",
                             "children": {
-                                "data": {
+                                "blockStates": {
                                     "type": "argument",
-                                    "parser": "brigadier:integer",
-                                    "properties": {
-                                        "min": -1
-                                    },
+                                    "parser": "minecraft:block_state",
                                     "executable": true
                                 }
                             },
