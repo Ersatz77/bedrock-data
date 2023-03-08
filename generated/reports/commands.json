@@ -4303,23 +4303,89 @@
                             "type": "argument",
                             "parser": "minecraft:vec3",
                             "children": {
-                                "spawnEvent": {
+                                "rot": {
                                     "type": "argument",
-                                    "parser": "brigadier:string",
-                                    "properties": {
-                                        "type": "phrase"
-                                    },
+                                    "parser": "minecraft:rotation",
                                     "children": {
-                                        "name": {
+                                        "spawnEvent": {
                                             "type": "argument",
                                             "parser": "brigadier:string",
                                             "properties": {
-                                                "type": "greedy"
+                                                "type": "phrase"
+                                            },
+                                            "children": {
+                                                "name": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:string",
+                                                    "properties": {
+                                                        "type": "greedy"
+                                                    },
+                                                    "executable": true
+                                                }
                                             },
                                             "executable": true
                                         }
                                     },
                                     "executable": true
+                                },
+                                "facing": {
+                                    "type": "literal",
+                                    "children": {
+                                        "entity": {
+                                            "type": "argument",
+                                            "parser": "minecraft:entity",
+                                            "properties": {
+                                                "type": "entities",
+                                                "amount": "single"
+                                            },
+                                            "children": {
+                                                "spawnEvent": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:string",
+                                                    "properties": {
+                                                        "type": "phrase"
+                                                    },
+                                                    "children": {
+                                                        "name": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:string",
+                                                            "properties": {
+                                                                "type": "greedy"
+                                                            },
+                                                            "executable": true
+                                                        }
+                                                    },
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        },
+                                        "pos": {
+                                            "type": "argument",
+                                            "parser": "minecraft:vec3",
+                                            "children": {
+                                                "spawnEvent": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:string",
+                                                    "properties": {
+                                                        "type": "phrase"
+                                                    },
+                                                    "children": {
+                                                        "name": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:string",
+                                                            "properties": {
+                                                                "type": "greedy"
+                                                            },
+                                                            "executable": true
+                                                        }
+                                                    },
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
                                 }
                             },
                             "executable": true
