@@ -4331,7 +4331,7 @@
                                 "facing": {
                                     "type": "literal",
                                     "children": {
-                                        "entity": {
+                                        "lookAtEntity": {
                                             "type": "argument",
                                             "parser": "minecraft:entity",
                                             "properties": {
@@ -4360,7 +4360,7 @@
                                             },
                                             "executable": true
                                         },
-                                        "pos": {
+                                        "lookAtPosition": {
                                             "type": "argument",
                                             "parser": "minecraft:vec3",
                                             "children": {
