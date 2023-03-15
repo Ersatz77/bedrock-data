@@ -254,7 +254,8 @@
                                                                     "parser": "minecraft:block_state",
                                                                     "executable": true
                                                                 }
-                                                            }
+                                                            },
+                                                            "executable": true
                                                         }
                                                     }
                                                 },
@@ -270,7 +271,8 @@
                                                                     "parser": "minecraft:block_state",
                                                                     "executable": true
                                                                 }
-                                                            }
+                                                            },
+                                                            "executable": true
                                                         }
                                                     }
                                                 },
@@ -286,7 +288,8 @@
                                                                     "parser": "minecraft:block_state",
                                                                     "executable": true
                                                                 }
-                                                            }
+                                                            },
+                                                            "executable": true
                                                         }
                                                     }
                                                 }
@@ -1327,6 +1330,40 @@
                                                 }
                                             },
                                             "executable": true
+                                        },
+                                        "destroy": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "hollow": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "keep": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "outline": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "replace": {
+                                            "type": "literal",
+                                            "children": {
+                                                "block": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:block",
+                                                    "children": {
+                                                        "blockStates": {
+                                                            "type": "argument",
+                                                            "parser": "minecraft:block_state",
+                                                            "executable": true
+                                                        }
+                                                    },
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
                                         }
                                     },
                                     "executable": true
@@ -2076,6 +2113,70 @@
                 }
             },
             "executable": true
+        },
+        "inputpermission": {
+            "type": "literal",
+            "children": {
+                "set": {
+                    "type": "literal",
+                    "children": {
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "amount": "multiple",
+                                "type": "players"
+                            },
+                            "children": {
+                                "permission": {
+                                    "type": "argument",
+                                    "parser": "minecraft:permission",
+                                    "children": {
+                                        "enabled": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "disabled": {
+                                            "type": "literal",
+                                            "executable": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "query": {
+                    "type": "literal",
+                    "children": {
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "amount": "multiple",
+                                "type": "players"
+                            },
+                            "children": {
+                                "permission": {
+                                    "type": "argument",
+                                    "parser": "minecraft:permission",
+                                    "children": {
+                                        "enabled": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "disabled": {
+                                            "type": "literal",
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         },
         "immutableworld": {
             "type": "literal",
@@ -3878,6 +3979,18 @@
                                             "executable": true
                                         }
                                     },
+                                    "executable": true
+                                },
+                                "destroy": {
+                                    "type": "literal",
+                                    "executable": true
+                                },
+                                "keep": {
+                                    "type": "literal",
+                                    "executable": true
+                                },
+                                "replace": {
+                                    "type": "literal",
                                     "executable": true
                                 }
                             },
