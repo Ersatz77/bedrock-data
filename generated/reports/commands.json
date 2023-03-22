@@ -2000,6 +2000,27 @@
                     },
                     "executable": true
                 },
+                "runsetuntilfail": {
+                    "type": "literal",
+                    "children": {
+                        "testTag": {
+                            "type": "argument",
+                            "parser": "brigadier:string",
+                            "properties": {
+                                "type": "word"
+                            },
+                            "children": {
+                                "rotationSteps": {
+                                    "type": "argument",
+                                    "parser": "brigadier:integer",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                },
                 "clearall": {
                     "type": "literal",
                     "executable": true
@@ -2043,6 +2064,10 @@
                     }
                 },
                 "runthese": {
+                    "type": "literal",
+                    "executable": true
+                },
+                "stopall": {
                     "type": "literal",
                     "executable": true
                 }
