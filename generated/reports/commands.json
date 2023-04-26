@@ -103,6 +103,201 @@
                 "daylock"
             ]
         },
+        "camera": {
+            "type": "literal",
+            "children": {
+                "targets": {
+                    "type": "argument",
+                    "parser": "minecraft:entity",
+                    "properties": {
+                        "type": "players",
+                        "amount": "multiple"
+                    },
+                    "children": {
+                        "clear": {
+                            "type": "literal",
+                            "executable": true
+                        },
+                        "fade": {
+                            "type": "literal",
+                            "children": {
+                                "color": {
+                                    "type": "literal",
+                                    "children": {
+                                        "red": {
+                                            "type": "argument",
+                                            "parser": "brigadier:float",
+                                            "children": {
+                                                "green": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:float",
+                                                    "children": {
+                                                        "blue": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:float",
+                                                            "executable": true
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "time": {
+                                    "type": "literal",
+                                    "children": {
+                                        "fadeInSeconds": {
+                                            "type": "argument",
+                                            "parser": "brigadier:float",
+                                            "children": {
+                                                "holdSeconds": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:float",
+                                                    "children": {
+                                                        "fadeOutSeconds": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:float",
+                                                            "children": {
+                                                                "color": {
+                                                                    "type": "literal",
+                                                                    "children": {
+                                                                        "red": {
+                                                                            "type": "argument",
+                                                                            "parser": "brigadier:float",
+                                                                            "children": {
+                                                                                "green": {
+                                                                                    "type": "argument",
+                                                                                    "parser": "brigadier:float",
+                                                                                    "children": {
+                                                                                        "blue": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "brigadier:float",
+                                                                                            "executable": true
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "executable": true
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "executable": true
+                        },
+                        "set": {
+                            "type": "literal",
+                            "children": {
+                                "preset": {
+                                    "type": "argument",
+                                    "parser": "minecraft:resource_location",
+                                    "children": {
+                                        "default": {
+                                            "type": "literal",
+                                            "executable": true
+                                        },
+                                        "ease": {
+                                            "type": "literal",
+                                            "children": {
+                                                "easeTime": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:float",
+                                                    "children": {
+                                                        "easeType": {
+                                                            "type": "argument",
+                                                            "parser": "minecraft:easing",
+                                                            "children": {
+                                                                "default": {
+                                                                    "type": "literal",
+                                                                    "executable": true
+                                                                },
+                                                                "pos": {
+                                                                    "type": "literal",
+                                                                    "children": {
+                                                                        "pos": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:vec3",
+                                                                            "children": {
+                                                                                "rot": {
+                                                                                    "type": "literal",
+                                                                                    "children": {
+                                                                                        "rot": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "minecraft:vec2",
+                                                                                            "executable": true
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            "executable": true
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "rot": {
+                                                                    "type": "literal",
+                                                                    "children": {
+                                                                        "rot": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:vec2",
+                                                                            "executable": true
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "executable": true
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "pos": {
+                                            "type": "literal",
+                                            "children": {
+                                                "pos": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:vec3",
+                                                    "children": {
+                                                        "rot": {
+                                                            "type": "literal",
+                                                            "children": {
+                                                                "rot": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:vec2",
+                                                                    "executable": true
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "executable": true
+                                                }
+                                            }
+                                        },
+                                        "rot": {
+                                            "type": "literal",
+                                            "children": {
+                                                "rot": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:vec2",
+                                                    "executable": true
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "camerashake": {
             "type": "literal",
             "children": {
