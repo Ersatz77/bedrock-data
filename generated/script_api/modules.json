@@ -20,14 +20,18 @@
     "server-ui": {
         "module_name": "@minecraft/server-ui",
         "versions": [
-            "1.0.0-beta"
+            "1.1.0-beta",
+            "1.0.0",
+            "0.1.0"
         ]
     },
     "server": {
         "module_name": "@minecraft/server",
         "versions": [
-            "1.2.0-beta",
-            "1.1.0"
+            "1.3.0-beta",
+            "1.2.0",
+            "1.1.0",
+            "0.1.0"
         ]
     }
 }
