@@ -221,14 +221,14 @@
                                                                 "pos": {
                                                                     "type": "literal",
                                                                     "children": {
-                                                                        "cameraPos": {
+                                                                        "position": {
                                                                             "type": "argument",
                                                                             "parser": "minecraft:vec3",
                                                                             "children": {
                                                                                 "rot": {
                                                                                     "type": "literal",
                                                                                     "children": {
-                                                                                        "cameraRot": {
+                                                                                        "rotation": {
                                                                                             "type": "argument",
                                                                                             "parser": "minecraft:vec2",
                                                                                             "executable": true
@@ -243,7 +243,7 @@
                                                                 "rot": {
                                                                     "type": "literal",
                                                                     "children": {
-                                                                        "cameraRot": {
+                                                                        "rotation": {
                                                                             "type": "argument",
                                                                             "parser": "minecraft:vec2",
                                                                             "executable": true
@@ -260,14 +260,14 @@
                                         "pos": {
                                             "type": "literal",
                                             "children": {
-                                                "cameraPos": {
+                                                "position": {
                                                     "type": "argument",
                                                     "parser": "minecraft:vec3",
                                                     "children": {
                                                         "rot": {
                                                             "type": "literal",
                                                             "children": {
-                                                                "cameraRot": {
+                                                                "rotation": {
                                                                     "type": "argument",
                                                                     "parser": "minecraft:vec2",
                                                                     "executable": true
@@ -282,7 +282,7 @@
                                         "rot": {
                                             "type": "literal",
                                             "children": {
-                                                "cameraRot": {
+                                                "rotation": {
                                                     "type": "argument",
                                                     "parser": "minecraft:vec2",
                                                     "executable": true
