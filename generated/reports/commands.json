@@ -126,15 +126,27 @@
                                     "children": {
                                         "red": {
                                             "type": "argument",
-                                            "parser": "brigadier:float",
+                                            "parser": "brigadier:integer",
+                                            "properties": {
+                                                "min": 0,
+                                                "max": 255
+                                            },
                                             "children": {
                                                 "green": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:float",
+                                                    "parser": "brigadier:integer",
+                                                    "properties": {
+                                                        "min": 0,
+                                                        "max": 255
+                                                    },
                                                     "children": {
                                                         "blue": {
                                                             "type": "argument",
-                                                            "parser": "brigadier:float",
+                                                            "parser": "brigadier:integer",
+                                                            "properties": {
+                                                                "min": 0,
+                                                                "max": 255
+                                                            },
                                                             "executable": true
                                                         }
                                                     }
@@ -149,29 +161,53 @@
                                         "fadeInSeconds": {
                                             "type": "argument",
                                             "parser": "brigadier:float",
+                                            "properties": {
+                                                "min": 0.0,
+                                                "max": 10.0
+                                            },
                                             "children": {
                                                 "holdSeconds": {
                                                     "type": "argument",
                                                     "parser": "brigadier:float",
+                                                    "properties": {
+                                                        "min": 0.0,
+                                                        "max": 10.0
+                                                    },
                                                     "children": {
                                                         "fadeOutSeconds": {
                                                             "type": "argument",
                                                             "parser": "brigadier:float",
+                                                            "properties": {
+                                                                "min": 0.0,
+                                                                "max": 10.0
+                                                            },
                                                             "children": {
                                                                 "color": {
                                                                     "type": "literal",
                                                                     "children": {
                                                                         "red": {
                                                                             "type": "argument",
-                                                                            "parser": "brigadier:float",
+                                                                            "parser": "brigadier:integer",
+                                                                            "properties": {
+                                                                                "min": 0,
+                                                                                "max": 255
+                                                                            },
                                                                             "children": {
                                                                                 "green": {
                                                                                     "type": "argument",
-                                                                                    "parser": "brigadier:float",
+                                                                                    "parser": "brigadier:integer",
+                                                                                    "properties": {
+                                                                                        "min": 0,
+                                                                                        "max": 255
+                                                                                    },
                                                                                     "children": {
                                                                                         "blue": {
                                                                                             "type": "argument",
-                                                                                            "parser": "brigadier:float",
+                                                                                            "parser": "brigadier:integer",
+                                                                                            "properties": {
+                                                                                                "min": 0,
+                                                                                                "max": 255
+                                                                                            },
                                                                                             "executable": true
                                                                                         }
                                                                                     }
