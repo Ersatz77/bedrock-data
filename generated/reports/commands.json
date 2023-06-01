@@ -3334,6 +3334,49 @@
                 }
             }
         },
+        "recipe": {
+            "type": "literal",
+            "children": {
+                "targets": {
+                    "type": "argument",
+                    "parser": "minecraft:entity",
+                    "properties": {
+                        "type": "players",
+                        "amount": "multiple"
+                    },
+                    "children": {
+                        "give": {
+                            "type": "literal",
+                            "children": {
+                                "*": {
+                                    "type": "literal",
+                                    "executable": true
+                                },
+                                "recipe": {
+                                    "type": "argument",
+                                    "parser": "minecraft:resource_location",
+                                    "executable": true
+                                }
+                            }
+                        },
+                        "take": {
+                            "type": "literal",
+                            "children": {
+                                "*": {
+                                    "type": "literal",
+                                    "executable": true
+                                },
+                                "recipe": {
+                                    "type": "argument",
+                                    "parser": "minecraft:resource_location",
+                                    "executable": true
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "reload": {
             "type": "literal",
             "executable": true
