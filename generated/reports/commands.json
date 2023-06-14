@@ -254,6 +254,25 @@
                                                                     "type": "literal",
                                                                     "executable": true
                                                                 },
+                                                                "facing": {
+                                                                    "type": "literal",
+                                                                    "children": {
+                                                                        "lookAtEntity": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:entity",
+                                                                            "properties": {
+                                                                                "type": "entities",
+                                                                                "amount": "single"
+                                                                            },
+                                                                            "executable": true
+                                                                        },
+                                                                        "lookAtPosition": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:vec3",
+                                                                            "executable": true
+                                                                        }
+                                                                    }
+                                                                },
                                                                 "pos": {
                                                                     "type": "literal",
                                                                     "children": {
@@ -261,6 +280,25 @@
                                                                             "type": "argument",
                                                                             "parser": "minecraft:vec3",
                                                                             "children": {
+                                                                                "facing": {
+                                                                                    "type": "literal",
+                                                                                    "children": {
+                                                                                        "lookAtEntity": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "minecraft:entity",
+                                                                                            "properties": {
+                                                                                                "type": "entities",
+                                                                                                "amount": "single"
+                                                                                            },
+                                                                                            "executable": true
+                                                                                        },
+                                                                                        "lookAtPosition": {
+                                                                                            "type": "argument",
+                                                                                            "parser": "minecraft:vec3",
+                                                                                            "executable": true
+                                                                                        }
+                                                                                    }
+                                                                                },
                                                                                 "rot": {
                                                                                     "type": "literal",
                                                                                     "children": {
@@ -293,6 +331,25 @@
                                                 }
                                             }
                                         },
+                                        "facing": {
+                                            "type": "literal",
+                                            "children": {
+                                                "lookAtEntity": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:entity",
+                                                    "properties": {
+                                                        "type": "entities",
+                                                        "amount": "single"
+                                                    },
+                                                    "executable": true
+                                                },
+                                                "lookAtPosition": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:vec3",
+                                                    "executable": true
+                                                }
+                                            }
+                                        },
                                         "pos": {
                                             "type": "literal",
                                             "children": {
@@ -300,6 +357,25 @@
                                                     "type": "argument",
                                                     "parser": "minecraft:vec3",
                                                     "children": {
+                                                        "facing": {
+                                                            "type": "literal",
+                                                            "children": {
+                                                                "lookAtEntity": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:entity",
+                                                                    "properties": {
+                                                                        "type": "entities",
+                                                                        "amount": "single"
+                                                                    },
+                                                                    "executable": true
+                                                                },
+                                                                "lookAtPosition": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:vec3",
+                                                                    "executable": true
+                                                                }
+                                                            }
+                                                        },
                                                         "rot": {
                                                             "type": "literal",
                                                             "children": {
