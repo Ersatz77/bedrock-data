@@ -3413,16 +3413,16 @@
         "recipe": {
             "type": "literal",
             "children": {
-                "targets": {
-                    "type": "argument",
-                    "parser": "minecraft:entity",
-                    "properties": {
-                        "type": "players",
-                        "amount": "multiple"
-                    },
+                "give": {
+                    "type": "literal",
                     "children": {
-                        "give": {
-                            "type": "literal",
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "type": "players",
+                                "amount": "multiple"
+                            },
                             "children": {
                                 "*": {
                                     "type": "literal",
@@ -3434,9 +3434,19 @@
                                     "executable": true
                                 }
                             }
-                        },
-                        "take": {
-                            "type": "literal",
+                        }
+                    }
+                },
+                "take": {
+                    "type": "literal",
+                    "children": {
+                        "targets": {
+                            "type": "argument",
+                            "parser": "minecraft:entity",
+                            "properties": {
+                                "type": "players",
+                                "amount": "multiple"
+                            },
                             "children": {
                                 "*": {
                                     "type": "literal",
