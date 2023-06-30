@@ -9,24 +9,21 @@ import requests
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--output',
-        help='Where to output generated files to',
-        type=str,
-        required=True
+        "--output", help="Where to output generated files to", type=str, required=True
     )
     parser.add_argument(
-        '--script_api_urls',
-        help ='A list of doc URLs to get Gametest info from',
+        "--script_api_urls",
+        help="A list of doc URLs to get Gametest info from",
         type=str,
         default=[],
-        nargs='+',
-        required=True
+        nargs="+",
+        required=True,
     )
 
     args = parser.parse_args()
     output = Path(args.output)
 
-    script_api_module_info(output / 'script_api', *args.script_api_urls)
+    script_api_module_info(output / "script_api", *args.script_api_urls)
 
 
 def script_api_module_info(output_dir: Path, *script_api_urls: str):
@@ -36,10 +33,14 @@ def script_api_module_info(output_dir: Path, *script_api_urls: str):
     `*script_api_urls` should be URLs to markdown files.
     """
 
-    HEADER_PATTERN = re.compile(r'^---.*?---$\n', flags=re.DOTALL | re.MULTILINE)
-    MANIFEST_DETAILS_PATTERN= re.compile(r'## Manifest Details\s```json\s(.*?)```', flags=re.MULTILINE | re.DOTALL)
-    AVAILABLE_VERSIONS_PATTERN = re.compile(r'^## Available Versions\s(.*?)\s$', flags=re.MULTILINE | re.DOTALL)
-    VERSION_PATTERN = re.compile(r'\`(.*?)\`')
+    HEADER_PATTERN = re.compile(r"^---.*?---$\n", flags=re.DOTALL | re.MULTILINE)
+    MANIFEST_DETAILS_PATTERN = re.compile(
+        r"## Manifest Details\s```json\s(.*?)```", flags=re.MULTILINE | re.DOTALL
+    )
+    AVAILABLE_VERSIONS_PATTERN = re.compile(
+        r"^## Available Versions\s(.*?)\s$", flags=re.MULTILINE | re.DOTALL
+    )
+    VERSION_PATTERN = re.compile(r"\`(.*?)\`")
 
     modules = {}
     for name, url in ((i.split("/")[-2], i) for i in script_api_urls):
@@ -49,17 +50,18 @@ def script_api_module_info(output_dir: Path, *script_api_urls: str):
             rq.raise_for_status()
 
             # Remove the header
-            text = HEADER_PATTERN.sub('', rq.text)
-#
+            text = HEADER_PATTERN.sub("", rq.text)
+
             # Get module info if the manifest snippet and available versions exist
             module_info = {}
-            if (
-                (manifest := MANIFEST_DETAILS_PATTERN.search(text)) and 
-                (versions := AVAILABLE_VERSIONS_PATTERN.search(text))
+            if (manifest := MANIFEST_DETAILS_PATTERN.search(text)) and (
+                versions := AVAILABLE_VERSIONS_PATTERN.search(text)
             ):
                 # Parse the text further
                 mainfest_json = json.loads(manifest.group(1))
-                versions = [v.group(1) for v in VERSION_PATTERN.finditer(versions.group(1))]
+                versions = [
+                    v.group(1) for v in VERSION_PATTERN.finditer(versions.group(1))
+                ]
 
                 # Create module info and add it to the dict
                 module_info["module_name"] = mainfest_json["module_name"]
@@ -78,5 +80,5 @@ def script_api_module_info(output_dir: Path, *script_api_urls: str):
         file.write(json.dumps(modules, indent=4))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
