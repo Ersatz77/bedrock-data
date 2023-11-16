@@ -3520,6 +3520,12 @@
         },
         "reload": {
             "type": "literal",
+            "children": {
+                "all": {
+                    "type": "literal",
+                    "executable": true
+                }
+            },
             "executable": true
         },
         "replaceitem": {
