@@ -397,7 +397,41 @@
                                                 "rotation": {
                                                     "type": "argument",
                                                     "parser": "minecraft:vec2",
+                                                    "children": {
+                                                        "view_offset": {
+                                                            "type": "literal",
+                                                            "children": {
+                                                                "xViewOffset": {
+                                                                    "type": "argument",
+                                                                    "parser": "brigadier:float",
+                                                                    "children": {
+                                                                        "yViewOffset": {
+                                                                            "type": "argument",
+                                                                            "parser": "brigadier:float",
+                                                                            "executable": true
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    },
                                                     "executable": true
+                                                }
+                                            }
+                                        },
+                                        "view_offset": {
+                                            "type": "literal",
+                                            "children": {
+                                                "xViewOffset": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:float",
+                                                    "children": {
+                                                        "yViewOffset": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:float",
+                                                            "executable": true
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
