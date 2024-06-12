@@ -4597,6 +4597,13 @@
                                                 "amount": "multiple",
                                                 "type": "entities"
                                             },
+                                            "children": {
+                                                "maxHeight": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:block_pos",
+                                                    "executable": true
+                                                }
+                                            },
                                             "executable": true
                                         }
                                     }
