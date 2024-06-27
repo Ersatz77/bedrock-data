@@ -12,8 +12,8 @@ def main():
         "--output", help="Where to output generated files to", type=str, required=True
     )
     parser.add_argument(
-        "--script_api_urls",
-        help="A list of doc URLs to get Gametest info from",
+        "--script-api-urls",
+        help="A list of doc URLs to get Script API info from",
         type=str,
         default=[],
         nargs="+",
@@ -28,7 +28,7 @@ def main():
 
 def script_api_module_info(output_dir: Path, *script_api_urls: str):
     """
-    Generates a file at 'ouput_dir' containing info about each script api module.
+    Generates a file at 'output_dir' containing info about each script api module.
 
     `*script_api_urls` should be URLs to markdown files.
     """
