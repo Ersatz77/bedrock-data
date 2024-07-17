@@ -473,6 +473,10 @@
                                     "executable": true
                                 }
                             }
+                        },
+                        "remove_target": {
+                            "type": "literal",
+                            "executable": true
                         }
                     }
                 }
