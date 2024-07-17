@@ -439,6 +439,40 @@
                                     "executable": true
                                 }
                             }
+                        },
+                        "target_entity": {
+                            "type": "literal",
+                            "children": {
+                                "target": {
+                                    "type": "argument",
+                                    "parser": "minecraft:entity",
+                                    "children": {
+                                        "target_center_offset": {
+                                            "type": "literal",
+                                            "children": {
+                                                "xTargetCenterOffset": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:float",
+                                                    "children": {
+                                                        "yTargetCenterOffset": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:float",
+                                                            "children": {
+                                                                "zTargetCenterOffset": {
+                                                                    "type": "argument",
+                                                                    "parser": "brigadier:float",
+                                                                    "executable": true
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            }
                         }
                     }
                 }
