@@ -331,6 +331,16 @@
                                                 }
                                             }
                                         },
+                                        "entity_offset": {
+                                            "type": "literal",
+                                            "children": {
+                                                "offset": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:vec3",
+                                                    "executable": true
+                                                }
+                                            }
+                                        },
                                         "facing": {
                                             "type": "literal",
                                             "children": {
@@ -398,19 +408,35 @@
                                                     "type": "argument",
                                                     "parser": "minecraft:vec2",
                                                     "children": {
+                                                        "entity_offset": {
+                                                            "type": "literal",
+                                                            "children": {
+                                                                "offset": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:vec3",
+                                                                    "executable": true
+                                                                }
+                                                            }
+                                                        },
                                                         "view_offset": {
                                                             "type": "literal",
                                                             "children": {
-                                                                "xViewOffset": {
+                                                                "offset": {
                                                                     "type": "argument",
-                                                                    "parser": "brigadier:float",
+                                                                    "parser": "minecraft:vec2",
                                                                     "children": {
-                                                                        "yViewOffset": {
-                                                                            "type": "argument",
-                                                                            "parser": "brigadier:float",
-                                                                            "executable": true
+                                                                        "entity_offset": {
+                                                                            "type": "literal",
+                                                                            "children": {
+                                                                                "offset": {
+                                                                                    "type": "argument",
+                                                                                    "parser": "minecraft:vec3",
+                                                                                    "executable": true
+                                                                                }
+                                                                            }
                                                                         }
-                                                                    }
+                                                                    },
+                                                                    "executable": true
                                                                 }
                                                             }
                                                         }
@@ -422,16 +448,22 @@
                                         "view_offset": {
                                             "type": "literal",
                                             "children": {
-                                                "xViewOffset": {
+                                                "offset": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:float",
+                                                    "parser": "minecraft:vec2",
                                                     "children": {
-                                                        "yViewOffset": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:float",
-                                                            "executable": true
+                                                        "entity_offset": {
+                                                            "type": "literal",
+                                                            "children": {
+                                                                "offset": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:vec3",
+                                                                    "executable": true
+                                                                }
+                                                            }
                                                         }
-                                                    }
+                                                    },
+                                                    "executable": true
                                                 }
                                             }
                                         }
@@ -450,22 +482,10 @@
                                         "target_center_offset": {
                                             "type": "literal",
                                             "children": {
-                                                "xTargetCenterOffset": {
+                                                "offset": {
                                                     "type": "argument",
-                                                    "parser": "brigadier:float",
-                                                    "children": {
-                                                        "yTargetCenterOffset": {
-                                                            "type": "argument",
-                                                            "parser": "brigadier:float",
-                                                            "children": {
-                                                                "zTargetCenterOffset": {
-                                                                    "type": "argument",
-                                                                    "parser": "brigadier:float",
-                                                                    "executable": true
-                                                                }
-                                                            }
-                                                        }
-                                                    }
+                                                    "parser": "minecraft:vec3",
+                                                    "executable": true
                                                 }
                                             }
                                         }
@@ -921,6 +941,28 @@
                             "type": "argument",
                             "parser": "minecraft:mob_effect",
                             "children": {
+                                "infinite": {
+                                    "type": "literal",
+                                    "children": {
+                                        "amplifier": {
+                                            "type": "argument",
+                                            "parser": "brigadier:integer",
+                                            "properties": {
+                                                "min": 0,
+                                                "max": 255
+                                            },
+                                            "children": {
+                                                "hideParticles": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:bool",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                },
                                 "seconds": {
                                     "type": "argument",
                                     "parser": "brigadier:integer",
@@ -953,6 +995,13 @@
                         },
                         "clear": {
                             "type": "literal",
+                            "children": {
+                                "effect": {
+                                    "type": "argument",
+                                    "parser": "minecraft:mob_effect",
+                                    "executable": true
+                                }
+                            },
                             "executable": true
                         }
                     }
@@ -4126,6 +4175,16 @@
         "schedule": {
             "type": "literal",
             "children": {
+                "clear": {
+                    "type": "literal",
+                    "children": {
+                        "function": {
+                            "type": "argument",
+                            "parser": "minecraft:function",
+                            "executable": true
+                        }
+                    }
+                },
                 "on_area_loaded": {
                     "type": "literal",
                     "children": {
@@ -4190,6 +4249,41 @@
                                                     "executable": true
                                                 }
                                             }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "clear": {
+                            "type": "literal",
+                            "children": {
+                                "function": {
+                                    "type": "literal",
+                                    "children": {
+                                        "function": {
+                                            "type": "argument",
+                                            "parser": "minecraft:function",
+                                            "executable": true
+                                        }
+                                    }
+                                },
+                                "tickingarea": {
+                                    "type": "literal",
+                                    "children": {
+                                        "name": {
+                                            "type": "argument",
+                                            "parser": "brigadier:string",
+                                            "properties": {
+                                                "type": "word"
+                                            },
+                                            "children": {
+                                                "function": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:function",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
                                         }
                                     }
                                 }
