@@ -14,8 +14,7 @@
     "server-gametest": {
         "module_name": "@minecraft/server-gametest",
         "versions": [
-            "1.0.0-beta",
-            "0.1.0"
+            "1.0.0-beta"
         ]
     },
     "server-net": {
@@ -27,7 +26,8 @@
     "server": {
         "module_name": "@minecraft/server",
         "versions": [
-            "1.15.0-beta",
+            "1.16.0-beta",
+            "1.14.0",
             "1.13.0",
             "1.12.0",
             "1.11.0",
