@@ -2821,7 +2821,39 @@
                         "targets": {
                             "type": "argument",
                             "parser": "minecraft:entity",
+                            "properties": {
+                                "type": "players",
+                                "amount": "multiple"
+                            },
                             "children": {
+                                "kill": {
+                                    "type": "literal",
+                                    "children": {
+                                        "target": {
+                                            "type": "argument",
+                                            "parser": "minecraft:entity",
+                                            "properties": {
+                                                "amount": "single"
+                                            },
+                                            "children": {
+                                                "tool": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:item_stack",
+                                                    "executable": true
+                                                },
+                                                "mainhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "offhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                },
                                 "loot": {
                                     "type": "literal",
                                     "children": {
@@ -2847,15 +2879,12 @@
                                         }
                                     }
                                 },
-                                "kill": {
+                                "mine": {
                                     "type": "literal",
                                     "children": {
-                                        "target": {
+                                        "pos": {
                                             "type": "argument",
-                                            "parser": "minecraft:entity",
-                                            "properties": {
-                                                "amount": "single"
-                                            },
+                                            "parser": "minecraft:block_pos",
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
@@ -2886,6 +2915,34 @@
                             "type": "argument",
                             "parser": "minecraft:vec3",
                             "children": {
+                                "kill": {
+                                    "type": "literal",
+                                    "children": {
+                                        "target": {
+                                            "type": "argument",
+                                            "parser": "minecraft:entity",
+                                            "properties": {
+                                                "amount": "single"
+                                            },
+                                            "children": {
+                                                "tool": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:item_stack",
+                                                    "executable": true
+                                                },
+                                                "mainhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "offhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                },
                                 "loot": {
                                     "type": "literal",
                                     "children": {
@@ -2911,15 +2968,12 @@
                                         }
                                     }
                                 },
-                                "kill": {
+                                "mine": {
                                     "type": "literal",
                                     "children": {
-                                        "target": {
+                                        "pos": {
                                             "type": "argument",
-                                            "parser": "minecraft:entity",
-                                            "properties": {
-                                                "amount": "single"
-                                            },
+                                            "parser": "minecraft:block_pos",
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
@@ -2965,31 +3019,6 @@
                                                             "type": "argument",
                                                             "parser": "brigadier:integer",
                                                             "children": {
-                                                                "loot": {
-                                                                    "type": "literal",
-                                                                    "children": {
-                                                                        "loot_table": {
-                                                                            "type": "argument",
-                                                                            "parser": "minecraft:resource_location",
-                                                                            "children": {
-                                                                                "tool": {
-                                                                                    "type": "argument",
-                                                                                    "parser": "minecraft:item_stack",
-                                                                                    "executable": true
-                                                                                },
-                                                                                "mainhand": {
-                                                                                    "type": "literal",
-                                                                                    "executable": true
-                                                                                },
-                                                                                "offhand": {
-                                                                                    "type": "literal",
-                                                                                    "executable": true
-                                                                                }
-                                                                            },
-                                                                            "executable": true
-                                                                        }
-                                                                    }
-                                                                },
                                                                 "kill": {
                                                                     "type": "literal",
                                                                     "children": {
@@ -3017,6 +3046,84 @@
                                                                             "executable": true
                                                                         }
                                                                     }
+                                                                },
+                                                                "loot": {
+                                                                    "type": "literal",
+                                                                    "children": {
+                                                                        "loot_table": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:resource_location",
+                                                                            "children": {
+                                                                                "tool": {
+                                                                                    "type": "argument",
+                                                                                    "parser": "minecraft:item_stack",
+                                                                                    "executable": true
+                                                                                },
+                                                                                "mainhand": {
+                                                                                    "type": "literal",
+                                                                                    "executable": true
+                                                                                },
+                                                                                "offhand": {
+                                                                                    "type": "literal",
+                                                                                    "executable": true
+                                                                                }
+                                                                            },
+                                                                            "executable": true
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "mine": {
+                                                                    "type": "literal",
+                                                                    "children": {
+                                                                        "pos": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:block_pos",
+                                                                            "children": {
+                                                                                "tool": {
+                                                                                    "type": "argument",
+                                                                                    "parser": "minecraft:item_stack",
+                                                                                    "executable": true
+                                                                                },
+                                                                                "mainhand": {
+                                                                                    "type": "literal",
+                                                                                    "executable": true
+                                                                                },
+                                                                                "offhand": {
+                                                                                    "type": "literal",
+                                                                                    "executable": true
+                                                                                }
+                                                                            },
+                                                                            "executable": true
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "kill": {
+                                                            "type": "literal",
+                                                            "children": {
+                                                                "target": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:entity",
+                                                                    "properties": {
+                                                                        "amount": "single"
+                                                                    },
+                                                                    "children": {
+                                                                        "tool": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:item_stack",
+                                                                            "executable": true
+                                                                        },
+                                                                        "mainhand": {
+                                                                            "type": "literal",
+                                                                            "executable": true
+                                                                        },
+                                                                        "offhand": {
+                                                                            "type": "literal",
+                                                                            "executable": true
+                                                                        }
+                                                                    },
+                                                                    "executable": true
                                                                 }
                                                             }
                                                         },
@@ -3045,15 +3152,12 @@
                                                                 }
                                                             }
                                                         },
-                                                        "kill": {
+                                                        "mine": {
                                                             "type": "literal",
                                                             "children": {
-                                                                "target": {
+                                                                "pos": {
                                                                     "type": "argument",
-                                                                    "parser": "minecraft:entity",
-                                                                    "properties": {
-                                                                        "amount": "single"
-                                                                    },
+                                                                    "parser": "minecraft:block_pos",
                                                                     "children": {
                                                                         "tool": {
                                                                             "type": "argument",
@@ -3099,31 +3203,6 @@
                                                             "type": "argument",
                                                             "parser": "brigadier:integer",
                                                             "children": {
-                                                                "loot": {
-                                                                    "type": "literal",
-                                                                    "children": {
-                                                                        "loot_table": {
-                                                                            "type": "argument",
-                                                                            "parser": "minecraft:resource_location",
-                                                                            "children": {
-                                                                                "tool": {
-                                                                                    "type": "argument",
-                                                                                    "parser": "minecraft:item_stack",
-                                                                                    "executable": true
-                                                                                },
-                                                                                "mainhand": {
-                                                                                    "type": "literal",
-                                                                                    "executable": true
-                                                                                },
-                                                                                "offhand": {
-                                                                                    "type": "literal",
-                                                                                    "executable": true
-                                                                                }
-                                                                            },
-                                                                            "executable": true
-                                                                        }
-                                                                    }
-                                                                },
                                                                 "kill": {
                                                                     "type": "literal",
                                                                     "children": {
@@ -3151,6 +3230,84 @@
                                                                             "executable": true
                                                                         }
                                                                     }
+                                                                },
+                                                                "loot": {
+                                                                    "type": "literal",
+                                                                    "children": {
+                                                                        "loot_table": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:resource_location",
+                                                                            "children": {
+                                                                                "tool": {
+                                                                                    "type": "argument",
+                                                                                    "parser": "minecraft:item_stack",
+                                                                                    "executable": true
+                                                                                },
+                                                                                "mainhand": {
+                                                                                    "type": "literal",
+                                                                                    "executable": true
+                                                                                },
+                                                                                "offhand": {
+                                                                                    "type": "literal",
+                                                                                    "executable": true
+                                                                                }
+                                                                            },
+                                                                            "executable": true
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "mine": {
+                                                                    "type": "literal",
+                                                                    "children": {
+                                                                        "pos": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:block_pos",
+                                                                            "children": {
+                                                                                "tool": {
+                                                                                    "type": "argument",
+                                                                                    "parser": "minecraft:item_stack",
+                                                                                    "executable": true
+                                                                                },
+                                                                                "mainhand": {
+                                                                                    "type": "literal",
+                                                                                    "executable": true
+                                                                                },
+                                                                                "offhand": {
+                                                                                    "type": "literal",
+                                                                                    "executable": true
+                                                                                }
+                                                                            },
+                                                                            "executable": true
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "kill": {
+                                                            "type": "literal",
+                                                            "children": {
+                                                                "target": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:entity",
+                                                                    "properties": {
+                                                                        "amount": "single"
+                                                                    },
+                                                                    "children": {
+                                                                        "tool": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:item_stack",
+                                                                            "executable": true
+                                                                        },
+                                                                        "mainhand": {
+                                                                            "type": "literal",
+                                                                            "executable": true
+                                                                        },
+                                                                        "offhand": {
+                                                                            "type": "literal",
+                                                                            "executable": true
+                                                                        }
+                                                                    },
+                                                                    "executable": true
                                                                 }
                                                             }
                                                         },
@@ -3179,15 +3336,12 @@
                                                                 }
                                                             }
                                                         },
-                                                        "kill": {
+                                                        "mine": {
                                                             "type": "literal",
                                                             "children": {
-                                                                "target": {
+                                                                "pos": {
                                                                     "type": "argument",
-                                                                    "parser": "minecraft:entity",
-                                                                    "properties": {
-                                                                        "amount": "single"
-                                                                    },
+                                                                    "parser": "minecraft:block_pos",
                                                                     "children": {
                                                                         "tool": {
                                                                             "type": "argument",
@@ -3224,6 +3378,34 @@
                             "type": "argument",
                             "parser": "minecraft:vec3",
                             "children": {
+                                "kill": {
+                                    "type": "literal",
+                                    "children": {
+                                        "target": {
+                                            "type": "argument",
+                                            "parser": "minecraft:entity",
+                                            "properties": {
+                                                "amount": "single"
+                                            },
+                                            "children": {
+                                                "tool": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:item_stack",
+                                                    "executable": true
+                                                },
+                                                "mainhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "offhand": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                },
                                 "loot": {
                                     "type": "literal",
                                     "children": {
@@ -3249,15 +3431,12 @@
                                         }
                                     }
                                 },
-                                "kill": {
+                                "mine": {
                                     "type": "literal",
                                     "children": {
-                                        "target": {
+                                        "pos": {
                                             "type": "argument",
-                                            "parser": "minecraft:entity",
-                                            "properties": {
-                                                "amount": "single"
-                                            },
+                                            "parser": "minecraft:block_pos",
                                             "children": {
                                                 "tool": {
                                                     "type": "argument",
@@ -4182,6 +4361,50 @@
                             "type": "argument",
                             "parser": "minecraft:function",
                             "executable": true
+                        }
+                    }
+                },
+                "delay": {
+                    "type": "literal",
+                    "children": {
+                        "add": {
+                            "type": "literal",
+                            "children": {
+                                "function": {
+                                    "type": "argument",
+                                    "parser": "minecraft:function",
+                                    "children": {
+                                        "time": {
+                                            "type": "argument",
+                                            "parser": "minecraft:time",
+                                            "properties": {
+                                                "min": 0
+                                            },
+                                            "children": {
+                                                "append": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "replace": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "clear": {
+                            "type": "literal",
+                            "children": {
+                                "function": {
+                                    "type": "argument",
+                                    "parser": "minecraft:function",
+                                    "executable": true
+                                }
+                            }
                         }
                     }
                 },
