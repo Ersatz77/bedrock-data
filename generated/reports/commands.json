@@ -3749,6 +3749,142 @@
                 }
             }
         },
+        "place": {
+            "type": "literal",
+            "children": {
+                "feature": {
+                    "type": "literal",
+                    "children": {
+                        "feature": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_key",
+                            "properties": {
+                                "registry": "minecraft:features"
+                            },
+                            "children": {
+                                "pos": {
+                                    "type": "argument",
+                                    "parser": "minecraft:block_pos",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                },
+                "featurerule": {
+                    "type": "literal",
+                    "children": {
+                        "featurerule": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_key",
+                            "properties": {
+                                "registry": "minecraft:feature_rules"
+                            },
+                            "children": {
+                                "pos": {
+                                    "type": "argument",
+                                    "parser": "minecraft:block_pos",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                },
+                "jigsaw": {
+                    "type": "literal",
+                    "children": {
+                        "pool": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_key",
+                            "properties": {
+                                "registry": "minecraft:template_pools"
+                            },
+                            "children": {
+                                "jigsawTarget": {
+                                    "type": "argument",
+                                    "parser": "minecraft:resource_location",
+                                    "children": {
+                                        "maxDepth": {
+                                            "type": "argument",
+                                            "parser": "brigadier:integer",
+                                            "properties": {
+                                                "min": 1,
+                                                "max": 20
+                                            },
+                                            "children": {
+                                                "pos": {
+                                                    "type": "argument",
+                                                    "parser": "minecraft:block_pos",
+                                                    "children": {
+                                                        "keepJigsaws": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:bool",
+                                                            "children": {
+                                                                "includeEntities": {
+                                                                    "type": "argument",
+                                                                    "parser": "brigadier:bool",
+                                                                    "executable": true
+                                                                }
+                                                            },
+                                                            "executable": true
+                                                        }
+                                                    },
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "structure": {
+                    "type": "literal",
+                    "children": {
+                        "structure": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_key",
+                            "properties": {
+                                "registry": "minecraft:structures"
+                            },
+                            "children": {
+                                "pos": {
+                                    "type": "argument",
+                                    "parser": "minecraft:block_pos",
+                                    "children": {
+                                        "ignoreStartHeight": {
+                                            "type": "argument",
+                                            "parser": "brigadier:bool",
+                                            "children": {
+                                                "keepJigsaws": {
+                                                    "type": "argument",
+                                                    "parser": "brigadier:bool",
+                                                    "children": {
+                                                        "includeEntities": {
+                                                            "type": "argument",
+                                                            "parser": "brigadier:bool",
+                                                            "executable": true
+                                                        }
+                                                    },
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    },
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    }
+                }
+            }
+        },
         "playanimation": {
             "type": "literal",
             "children": {
@@ -5083,15 +5219,6 @@
                             "executable": true
                         }
                     }
-                },
-                "watchdog": {
-                    "type": "literal",
-                    "children": {
-                        "exportstats": {
-                            "type": "literal",
-                            "executable": true
-                        }
-                    }
                 }
             }
         },
@@ -5208,11 +5335,11 @@
                                                     "type": "argument",
                                                     "parser": "minecraft:structure_mirror",
                                                     "children": {
-                                                        "includesEntities": {
+                                                        "includeEntities": {
                                                             "type": "argument",
                                                             "parser": "brigadier:bool",
                                                             "children": {
-                                                                "includesBlocks": {
+                                                                "includeBlocks": {
                                                                     "type": "argument",
                                                                     "parser": "brigadier:bool",
                                                                     "children": {
@@ -5262,11 +5389,11 @@
                                                                         "min": 0.0
                                                                     },
                                                                     "children": {
-                                                                        "includesEntities": {
+                                                                        "includeEntities": {
                                                                             "type": "argument",
                                                                             "parser": "brigadier:bool",
                                                                             "children": {
-                                                                                "includesBlocks": {
+                                                                                "includeBlocks": {
                                                                                     "type": "argument",
                                                                                     "parser": "brigadier:bool",
                                                                                     "children": {
