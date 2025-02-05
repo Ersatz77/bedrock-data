@@ -1,28 +1,4 @@
 {
-    "server-admin": {
-        "module_name": "@minecraft/server-admin",
-        "versions": [
-            "1.0.0-beta"
-        ]
-    },
-    "server-editor": {
-        "module_name": "@minecraft/server-editor",
-        "versions": [
-            "0.1.0-beta"
-        ]
-    },
-    "server-gametest": {
-        "module_name": "@minecraft/server-gametest",
-        "versions": [
-            "1.0.0-beta"
-        ]
-    },
-    "server-net": {
-        "module_name": "@minecraft/server-net",
-        "versions": [
-            "1.0.0-beta"
-        ]
-    },
     "server": {
         "module_name": "@minecraft/server",
         "versions": [
@@ -57,6 +33,42 @@
             "1.1.0",
             "1.0.0",
             "0.1.0"
+        ]
+    },
+    "server-admin": {
+        "module_name": "@minecraft/server-admin",
+        "versions": [
+            "1.0.0-beta"
+        ]
+    },
+    "server-net": {
+        "module_name": "@minecraft/server-net",
+        "versions": [
+            "1.0.0-beta"
+        ]
+    },
+    "server-editor": {
+        "module_name": "@minecraft/server-editor",
+        "versions": [
+            "0.1.0-beta"
+        ]
+    },
+    "server-gametest": {
+        "module_name": "@minecraft/server-gametest",
+        "versions": [
+            "1.0.0-beta"
+        ]
+    },
+    "debug-utilities": {
+        "module_name": "@minecraft/debug-utilities",
+        "versions": [
+            "1.0.0-beta"
+        ]
+    },
+    "diagnostics": {
+        "module_name": "@minecraft/diagnostics",
+        "versions": [
+            "1.0.0-beta"
         ]
     }
 }
