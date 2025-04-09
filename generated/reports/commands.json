@@ -810,10 +810,35 @@
                         "type": "greedy"
                     },
                     "executable": true
-                },
-                "out": {
-                    "type": "literal",
-                    "executable": true
+                }
+            }
+        },
+        "controlscheme": {
+            "type": "literal",
+            "children": {
+                "targets": {
+                    "type": "argument",
+                    "parser": "minecraft:entity",
+                    "properties": {
+                        "amount": "multiple",
+                        "type": "players"
+                    },
+                    "children": {
+                        "clear": {
+                            "type": "literal",
+                            "executable": true
+                        },
+                        "set": {
+                            "type": "literal",
+                            "children": {
+                                "controlscheme": {
+                                    "type": "argument",
+                                    "parser": "minecraft:control_scheme",
+                                    "executable": true
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
