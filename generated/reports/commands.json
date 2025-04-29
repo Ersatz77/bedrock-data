@@ -3861,6 +3861,13 @@
                                                                 "includeEntities": {
                                                                     "type": "argument",
                                                                     "parser": "brigadier:bool",
+                                                                    "children": {
+                                                                        "liquidSettings": {
+                                                                            "type": "argument",
+                                                                            "parser": "minecraft:liquid_settings",
+                                                                            "executable": true
+                                                                        }
+                                                                    },
                                                                     "executable": true
                                                                 }
                                                             },
@@ -3903,6 +3910,13 @@
                                                         "includeEntities": {
                                                             "type": "argument",
                                                             "parser": "brigadier:bool",
+                                                            "children": {
+                                                                "liquidSettings": {
+                                                                    "type": "argument",
+                                                                    "parser": "minecraft:liquid_settings",
+                                                                    "executable": true
+                                                                }
+                                                            },
                                                             "executable": true
                                                         }
                                                     },
