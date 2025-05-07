@@ -1,6 +1,7 @@
 import argparse
 import json
 import re
+from itertools import chain
 from pathlib import Path
 
 import requests
@@ -40,7 +41,10 @@ def script_api_module_info(output_dir: Path, *script_api_urls: str):
     AVAILABLE_VERSIONS_PATTERN = re.compile(
         r"^## Available Versions\s(.*?)\s$", flags=re.MULTILINE | re.DOTALL
     )
-    VERSION_PATTERN = re.compile(r"\`(.*?)\`")
+    PRIOR_VERSIONS_PATTERN = re.compile(
+        r"^### Prior Versions\s\s(?:.*\):)\s(.*?)\s$", flags=re.MULTILINE | re.DOTALL
+    )
+    VERSION_PATTERN = re.compile(r"`(\d+\.\d+\.\d+(?:-beta)?)`")
 
     modules = {}
     for name, url in ((i.split("/")[-2], i) for i in script_api_urls):
@@ -52,16 +56,22 @@ def script_api_module_info(output_dir: Path, *script_api_urls: str):
             # Remove the header
             text = HEADER_PATTERN.sub("", rq.text)
 
-            # Get module info if the manifest snippet and available versions exist
+            # Get module info if the manifest snippet exists
             module_info = {}
-            if (manifest := MANIFEST_DETAILS_PATTERN.search(text)) and (
-                versions := AVAILABLE_VERSIONS_PATTERN.search(text)
-            ):
+            if manifest := MANIFEST_DETAILS_PATTERN.search(text):
                 # Parse the text further
                 mainfest_json = json.loads(manifest.group(1))
-                versions = [
-                    v.group(1) for v in VERSION_PATTERN.finditer(versions.group(1))
-                ]
+
+                # Add the versions if they exist
+                versions: list[str] = []
+                if raw_versions := AVAILABLE_VERSIONS_PATTERN.search(text):
+                    for m in VERSION_PATTERN.finditer(raw_versions.group(1)):
+                        versions.append(m.group(1))
+
+                # Add the prior versions if they exist
+                if raw_prior_versions := PRIOR_VERSIONS_PATTERN.search(text):
+                    for m in VERSION_PATTERN.finditer(raw_prior_versions.group(1)):
+                        versions.append(m.group(1))
 
                 # Create module info and add it to the dict
                 module_info["module_name"] = mainfest_json["module_name"]
