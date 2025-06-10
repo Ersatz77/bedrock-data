@@ -289,6 +289,20 @@
                             },
                             "executable": true
                         },
+                        "fov_clear": {
+                            "type": "literal",
+                            "executable": true
+                        },
+                        "fov_set": {
+                            "type": "literal",
+                            "children": {
+                                "fov_value": {
+                                    "type": "argument",
+                                    "parser": "brigadier:float",
+                                    "executable": true
+                                }
+                            }
+                        },
                         "set": {
                             "type": "literal",
                             "children": {
