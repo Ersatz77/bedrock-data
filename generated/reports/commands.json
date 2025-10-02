@@ -175,7 +175,24 @@
                         "amount": "multiple"
                     },
                     "children": {
+                        "attach_to_entity": {
+                            "type": "literal",
+                            "children": {
+                                "target": {
+                                    "type": "argument",
+                                    "parser": "minecraft:entity",
+                                    "properties": {
+                                        "amount": "single"
+                                    },
+                                    "executable": true
+                                }
+                            }
+                        },
                         "clear": {
+                            "type": "literal",
+                            "executable": true
+                        },
+                        "detach_from_entity": {
                             "type": "literal",
                             "executable": true
                         },
