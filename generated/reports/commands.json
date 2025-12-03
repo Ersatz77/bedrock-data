@@ -3799,6 +3799,43 @@
                 }
             }
         },
+        "packstack": {
+            "type": "literal",
+            "children": {
+                "client": {
+                    "type": "literal",
+                    "children": {
+                        "verbose": {
+                            "type": "literal",
+                            "children": {
+                                "exclude-vanilla": {
+                                    "type": "literal",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                },
+                "server": {
+                    "type": "literal",
+                    "children": {
+                        "verbose": {
+                            "type": "literal",
+                            "children": {
+                                "exclude-vanilla": {
+                                    "type": "literal",
+                                    "executable": true
+                                }
+                            },
+                            "executable": true
+                        }
+                    },
+                    "executable": true
+                }
+            }
+        },
         "particle": {
             "type": "literal",
             "children": {
