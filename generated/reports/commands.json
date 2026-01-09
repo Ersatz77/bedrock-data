@@ -320,6 +320,20 @@
                                 }
                             }
                         },
+                        "play_spline": {
+                            "type": "literal",
+                            "children": {
+                                "name": {
+                                    "type": "argument",
+                                    "parser": "minecraft:resource_location",
+                                    "executable": true
+                                }
+                            }
+                        },
+                        "remove_target": {
+                            "type": "literal",
+                            "executable": true
+                        },
                         "set": {
                             "type": "literal",
                             "children": {
@@ -585,10 +599,6 @@
                                     "executable": true
                                 }
                             }
-                        },
-                        "remove_target": {
-                            "type": "literal",
-                            "executable": true
                         }
                     }
                 }
