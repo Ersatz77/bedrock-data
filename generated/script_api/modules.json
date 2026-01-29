@@ -2,7 +2,8 @@
     "server": {
         "module_name": "@minecraft/server",
         "versions": [
-            "2.6.0-beta",
+            "2.7.0-beta",
+            "2.5.0",
             "2.4.0",
             "2.3.0",
             "2.2.0",
