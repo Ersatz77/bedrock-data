@@ -1,0 +1,32 @@
+name: Generate Stable Tag
+on:
+    workflow_dispatch:
+        inputs:
+            version:
+                description: 'A stable Bedrock version number'
+                required: true
+                type: string
+            hash:
+                description: 'The commit hash of a existing preview/stable tag'
+                required: true
+                type: string           
+jobs:
+    generate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v6
+
+            - name: Setup Git
+              uses: fregante/setup-git-user@v2
+
+            - name: Push Tag
+              run: |
+                git branch stable ${{inputs.hash}}
+                git checkout stable
+                echo ${{inputs.version}} > VERSION.txt
+                git add .
+                git commit -m "Updated version to ${{inputs.version}}"
+                git tag -a ${{inputs.version}} -m "${{inputs.version}}"
+                git push origin tag ${{inputs.version}}
+
