@@ -5,11 +5,7 @@ on:
             version:
                 description: 'A stable Bedrock version number'
                 required: true
-                type: string
-            hash:
-                description: 'The commit hash of a existing preview/stable tag'
-                required: true
-                type: string           
+                type: string       
 jobs:
     generate:
         runs-on: ubuntu-latest
@@ -22,7 +18,7 @@ jobs:
 
             - name: Push Tag
               run: |
-                git branch stable ${{inputs.hash}}
+                git branch stable
                 git checkout stable
                 echo ${{inputs.version}} > VERSION.txt
                 git add .
