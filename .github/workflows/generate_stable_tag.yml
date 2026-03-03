@@ -7,7 +7,7 @@ on:
                 required: true
                 type: string
             hash:
-                description: 'The commit hash of a existing preview/stable tag'
+                description: 'The commit hash of an existing preview/stable tag'
                 required: true
                 type: string           
 jobs:
