@@ -2363,17 +2363,6 @@
                     },
                     "executable": true
                 },
-                "locatorbar": {
-                    "type": "literal",
-                    "children": {
-                        "value": {
-                            "type": "argument",
-                            "parser": "brigadier:bool",
-                            "executable": true
-                        }
-                    },
-                    "executable": true
-                },
                 "maxcommandchainlength": {
                     "type": "literal",
                     "children": {
@@ -2417,6 +2406,19 @@
                         }
                     },
                     "executable": true
+                },
+                "playerwaypoints": {
+                    "type": "literal",
+                    "children": {
+                        "everyone": {
+                            "type": "literal",
+                            "executable": true
+                        },
+                        "off": {
+                            "type": "literal",
+                            "executable": true
+                        }
+                    }
                 },
                 "pvp": {
                     "type": "literal",
