@@ -2933,6 +2933,21 @@
                         }
                     }
                 },
+                "poi": {
+                    "type": "literal",
+                    "children": {
+                        "poi_type": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_location",
+                            "executable": true
+                        },
+                        "tags": {
+                            "type": "argument",
+                            "parser": "minecraft:resource_location",
+                            "executable": true
+                        }
+                    }
+                },
                 "structure": {
                     "type": "literal",
                     "children": {
@@ -6130,6 +6145,76 @@
                             "type": "argument",
                             "parser": "minecraft:time",
                             "executable": true
+                        }
+                    }
+                },
+                "of": {
+                    "type": "literal",
+                    "children": {
+                        "clock": {
+                            "type": "argument",
+                            "parser": "minecraft:resource",
+                            "properties": {
+                                "registry": "minecraft:world_clock"
+                            },
+                            "children": {
+                                "add": {
+                                    "type": "literal",
+                                    "children": {
+                                        "amount": {
+                                            "type": "argument",
+                                            "parser": "minecraft:time",
+                                            "executable": true
+                                        }
+                                    }
+                                },
+                                "pause": {
+                                    "type": "literal",
+                                    "executable": true
+                                },
+                                "query": {
+                                    "type": "literal",
+                                    "children": {
+                                        "time": {
+                                            "type": "literal",
+                                            "executable": true
+                                        }
+                                    }
+                                },
+                                "resume": {
+                                    "type": "literal",
+                                    "executable": true
+                                },
+                                "set": {
+                                    "type": "literal",
+                                    "children": {
+                                        "amount": {
+                                            "type": "argument",
+                                            "parser": "minecraft:time",
+                                            "executable": true
+                                        },
+                                        "timemarker": {
+                                            "type": "argument",
+                                            "parser": "minecraft:resource_location",
+                                            "children": {
+                                                "next": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "previous": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                },
+                                                "stay": {
+                                                    "type": "literal",
+                                                    "executable": true
+                                                }
+                                            },
+                                            "executable": true
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 },
