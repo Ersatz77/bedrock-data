@@ -2658,8 +2658,7 @@
                                     }
                                 },
                                 "withoutTags": {
-                                    "type": "argument",
-                                    "parser": "literal",
+                                    "type": "literal",
                                     "executable": true
                                 }
                             },
@@ -2686,8 +2685,7 @@
                                     }
                                 },
                                 "withoutTags": {
-                                    "type": "argument",
-                                    "parser": "literal",
+                                    "type": "literal",
                                     "executable": true
                                 }
                             },
